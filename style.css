@@ -141,6 +141,10 @@ body {
   padding: 10px;
 }
 
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .navbar a {
   color: #ffffff;
   text-decoration: none;
@@ -149,10 +153,6 @@ body {
 
 .navbar a:hover {
   color: aqua;
-}
-
-p.no-margin-top {
-  margin-top: 0;
 }
 
 @media only screen and (min-width: 600px) {
@@ -183,11 +183,15 @@ p.no-margin-top {
     font-size: 6.5vw;
   }
 
-.content-block a.projects {
-  margin: 21vh 0% 15vh 0%;
-}
+  .content-block a.projects {
+    margin: 21vh 0% 15vh 0%;
+  }
 
-.content-block a.about {
-  margin: 15vh 0% 3vh 0%;
-}
+  .content-block a.about {
+    margin: 15vh 0% 3vh 0%;
+  }
+
+  p.no-margin-top {
+    margin-top: 0;
+  }
 }
