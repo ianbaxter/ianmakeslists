@@ -15,7 +15,7 @@ body {
 
 /* Parallax effect on background header image */
 .parallax {
-  background-image: url("/images/blue.jpg");
+  background-image: url('images/blue.jpg');
   height: 100%;
   background-attachment: fixed;
   background-position: top;
