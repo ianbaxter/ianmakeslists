@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  div.content-wrap
+    div.parallax
+      div.header
+        #h1= title
+        div.navbar
+          a(href= "/") HOME
+          a(href= "/projects") PROJECTS
+          a(href= "/about") ABOUT
+    div.main-content-wrap
+      div.main-content
+        div.bio-picture
+          img(src="/images/portrait-2.jpg", alt="a photo of me")
+        div.content-description
+          p.no-margin-top Ian Baxter is a self-taught software engineer with a focus in Android development. He studied Music Technology and Physics and worked as an acoustic consultant before moving to Manchester in 2018. In his spare time he produces elecronic music using Ableton and TidalCycles. When not on a computer you can usually find him out and about, taking in the surroundings.
+    div.footer
+      div.social-links
+        #social-link
+          a(href="https://github.com/ianbaxter")
+            img(src="/svg/github.svg", alt="github link", height="32px", width="32px")
+        #social-link
+          a(href="https://soundcloud.com/exeflood")
+            img(src="/svg/soundcloud.svg", alt="soundcloud link", width="32px", height="32px")

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div.content-wrap
+    div.parallax
+      div.header
+        #h1= title
+        div.navbar
+          a(href= "/") HOME
+          a(href= "/projects") PROJECTS
+          a(href= "/about") ABOUT
+    div.main-content-wrap
+      div.main-content
+        div.content-block
+          a.projects(href= "/projects") PROJECTS
+        div.content-block
+          a.about(href= "/about") ABOUT
+    div.footer
+      div.social-links
+        #social-link
+          a(href="https://github.com/ianbaxter")
+            img(src="/svg/github.svg", alt="github link", height="32px", width="32px")

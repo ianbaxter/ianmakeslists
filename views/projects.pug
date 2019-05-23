@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  div.content-wrap
+    div.parallax
+      div.header
+        #h1= title
+        div.navbar
+          a(href= "/") HOME
+          a(href= "/projects") PROJECTS
+          a(href= "/about") ABOUT
+    div.content-title
+      #h2 Smile Alarm
+    div.main-content-wrap
+      div.main-content
+        div.content-block
+          div.content-picture
+            img(src="/images/alarm-screenshot-home.png", alt="screenshot of app home")
+          div.screenshot-description
+            p Pick a time for your alarm (the morning is always a good choice!).
+        div.content-block
+          div.content-picture
+            img(src="/images/alarm-screenshot-camera.png", alt="screenshot of app home")
+          div.screenshot-description
+            p Smile to turn off the alarm and take a photo of your happy face.
+        div.content-block
+          div.content-picture
+            img(src="/images/alarm-screenshot-gallery.png", alt="screenshot of app home")
+          div.screenshot-description
+            p View all of your smile snaps over the days... months... years!
+      div.secondary-content
+        p Smile alarm is an android application currently under construction.
+    div.footer
+      div.social-links
+        #social-link
+          a(href="https://github.com/ianbaxter")
+            img(src="/svg/github.svg", alt="github link", height="32px", width="32px")
