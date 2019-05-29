@@ -90,7 +90,6 @@ body {
 }
 
 .bio-picture img {
-  width: 100%;
   max-width: 90%;
   max-height: 90%;
 }
@@ -177,8 +176,8 @@ a {
   }
 
   .bio-picture img {
-    max-width: 60%;
-    max-height: 60%;
+    width: 60%;
+    max-height: 100%;
   }
 
   .content-block a {
