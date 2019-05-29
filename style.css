@@ -41,6 +41,7 @@ body {
   border: 1px outset #222;
   border-right: none;
   border-left: none;
+  border-top: none;
   color: black;
 }
 
@@ -53,6 +54,7 @@ body {
 }
 
 .main-content-wrap {
+  flex: 1;
   font-family: adobe-garamond-pro;
   font-weight: 400;
   color: rgba(0,0,0,.67);
@@ -66,10 +68,6 @@ body {
   padding: 40px 0px;
   margin: 0 auto;
   text-align: center;
-  border: 1px outset #222;
-  border-right: none;
-  border-left: none;
-  border-top: none;
 }
 
 .content-block {
@@ -123,6 +121,10 @@ body {
   text-align: center;
   color: black;
   padding: 40px;
+  border: 1px outset #222;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
 }
 
 .footer {
