@@ -218,7 +218,7 @@ nav ul li ul li {
    position: fixed;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   /* Change nav on small screens */
   nav {  
     display: flex;
@@ -281,7 +281,7 @@ nav ul li ul li {
   transform: rotate(45deg) translate(-6px, -10px);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   nav {
     min-height: 35vh;
   }
