@@ -1,16 +1,24 @@
-body {
-  margin: 0;  
-  font-family: 'Montserrat', sans-serif;
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+p {
+  padding: 20px 0px;
+}
+
+p.hidden-text {
+  display: none;
 }
 
 .content-wrap {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-}
-
-.header {
-  height: 250px;
 }
 
 /* Parallax effect on background header image */
@@ -24,35 +32,71 @@ body {
 }
 
 /* Main page header title */
-#h1 {
-  float: left;
-  text-align: center;
+h1 {
   font-size: 40px;
   font-weight: 400;
-  padding: 40px 10px 40px 35px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   color: #ffffff;
+  filter: drop-shadow(2px 2px 0.1rem #222);
 }
 
 /* Project header title */
 #h2 {
   text-align: center;
   font-size: 40px;
+  font-family: 'Montserrat', sans-serif;
+  color: #4fb3bf;
   padding-top: 40px;
-  border: 1px outset #222;
-  border-right: none;
-  border-left: none;
-  border-top: none;
-  color: black;
 }
 
-.navbar {
-  float: right;
-  text-align: center;
-  font-size: 20px;
-  padding: 55px 90px 35px 10px;
-  overflow: hidden;
+
+/* Navigation text styling */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 25vh;
+  font-family: 'Montserrat', sans-serif;
 }
 
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  filter: drop-shadow(2px 2px 0.1rem #222);
+}
+
+.nav-links a:hover {
+  color: aqua;
+}
+
+.nav-menu {
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-menu div {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  margin: 7px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(2px 2px 0.1rem #222);
+}
+
+.material-icons.md-48 { 
+  font-size: 48px; 
+}
+
+/* wrap for main content */
 .main-content-wrap {
   flex: 1;
   font-family: adobe-garamond-pro;
@@ -147,23 +191,111 @@ body {
   padding: 10px;
 }
 
-a {
-  -webkit-tap-highlight-color: transparent;
+nav ul li a {
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s linear;
 }
 
-.navbar a {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 0% 5%;
+nav ul li ul {
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  background: #373737;
 }
 
-.navbar a:hover {
-  color: aqua;
+nav ul li ul li {
+  padding: 20px 15px;
 }
 
-@media only screen and (min-width: 600px) {
-  .header {
-    height: 350px;
+.fixedPosition {
+   position: fixed;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Change nav on small screens */
+  nav {  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .nav-links {
+    position: fixed; /* this makes loads of space after footer */
+    right: 0px;
+    top: 25vh;
+    height: 75vh;
+    background: #373737;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+    list-style: none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  p.hidden-text {
+    visibility: hidden;
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px)
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 10px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-6px, -10px);
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    min-height: 35vh;
+  }
+
+  /* Hide the navigation button on large screens */
+  .nav-menu {
+    display: none;
+  }
+
+  nav ul {
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    padding: 0px 10px;
   }
 
   .main-content {
