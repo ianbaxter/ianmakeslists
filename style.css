@@ -3,6 +3,7 @@
   padding: 0px;
 }
 
+/* Remove link highlight effect */
 a {
   -webkit-tap-highlight-color: transparent;
 }
@@ -93,8 +94,24 @@ nav {
   filter: drop-shadow(2px 2px 0.1rem #222);
 }
 
-.material-icons.md-48 { 
-  font-size: 48px; 
+nav ul li a {
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s linear;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  background: #373737;
+}
+
+nav ul li ul li {
+  padding: 20px 15px;
 }
 
 /* wrap for main content */
@@ -115,6 +132,7 @@ nav {
   text-align: center;
 }
 
+/* Sectiion of content in main-content */
 .content-block {
   display: flex;
   flex-direction: column;
@@ -194,35 +212,15 @@ nav {
   padding: 10px;
 }
 
-nav ul li a {
-  cursor: pointer;
-  color: #fff;
-  font-size: 20px;
-  transition: 0.3s linear;
-}
-
-nav ul li ul {
-  display: none;
-  position: absolute;
-  width: 200px;
-  height: 60px;
-  text-align: center;
-  background: #373737;
-}
-
-nav ul li ul li {
-  padding: 20px 15px;
-}
-
+/* Fix position toggle for navigation menu */
 .fixedPosition {
    position: fixed;
 }
 
 @media only screen and (max-width: 600px) {
-  /* Change nav on small screens */
+  /* Use nav menu on small screens */
   nav {  
     display: flex;
-    justify-content: space-around;
     align-items: center;
   }
 
@@ -231,6 +229,7 @@ nav ul li ul li {
     right: 0px;
     top: 25vh;
     height: 75vh;
+    justify-content: unset;
     background: #373737;
     flex-direction: column;
     align-items: center;
@@ -242,6 +241,16 @@ nav ul li ul li {
   .nav-links li {
     opacity: 0;
     list-style: none;
+    padding-top: 50px;
+  }
+
+  nav ul li {
+    width: 65%;
+  }
+
+  nav ul li ul {
+    width: 80vw;
+    position: unset;
   }
 
   body {
@@ -254,10 +263,12 @@ nav ul li ul li {
   }
 }
 
+/* Toggle class for navigation menu */
 .nav-active {
   transform: translateX(0%);
 }
 
+/* Animate individual nav links */
 @keyframes navLinkFade {
   from {
     opacity: 0;
@@ -269,6 +280,7 @@ nav ul li ul li {
   }
 }
 
+/* Navigation menu button animation */
 .toggle .line1 {
   transform: rotate(-45deg) translate(-5px, 10px);
 }
@@ -282,13 +294,17 @@ nav ul li ul li {
 }
 
 @media only screen and (min-width: 600px) {
+  /* Hide the navigation button on large screens */
+  .nav-menu {
+    display: none;
+  }
+
   nav {
     min-height: 35vh;
   }
 
-  /* Hide the navigation button on large screens */
-  .nav-menu {
-    display: none;
+  nav a {
+    text-transform: uppercase;
   }
 
   nav ul {
