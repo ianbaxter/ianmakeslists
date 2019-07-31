@@ -9,11 +9,11 @@ $('nav li').hover(
 );
 
 // Sliding navigation menu animation
-const navSlide = () => {
-  let menu = document.querySelector(".nav-menu");
-  let navBar = document.querySelector(".nav-links");
-  let navLinks = document.querySelectorAll(".nav-links li");
-  let body = document.querySelector("body");
+const navToggle = () => {
+  const menu = document.querySelector(".nav-menu");
+  const navBar = document.querySelector(".nav-links");
+  const navLinks = document.querySelectorAll(".nav-links li");
+  const body = document.querySelector("body");
   
 
   menu.addEventListener("click", () => {
@@ -40,4 +40,4 @@ const navSlide = () => {
   })
 }
 
-navSlide();
+navToggle();

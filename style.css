@@ -9,6 +9,7 @@ a {
 
 p {
   padding: 20px 0px;
+  font-size: 20px;
 }
 
 p.hidden-text {
@@ -35,7 +36,7 @@ p.hidden-text {
 h1 {
   font-size: 40px;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: #ffffff;
   filter: drop-shadow(2px 2px 0.1rem #222);
@@ -123,10 +124,11 @@ nav {
 
 .content-block a {
   font-size: 100px;
-  font-size: 18vw;
-  color: black;
+  font-size: 14vw;
   text-decoration: none;
   margin: 18vh 0%;
+  font-family: 'Montserrat', sans-serif;
+  color: rgba(0,0,0,.85);
 }
 
 .content-block a:hover {
@@ -158,6 +160,7 @@ nav {
 }
 
 .screenshot-description {
+  font-size: 20px;
   max-width: 90%;
   vertical-align: top;
   overflow: hidden;
@@ -303,7 +306,7 @@ nav ul li ul li {
   }
 
   .content-description {
-    max-width: 45%;
+    width: 50%;
     padding-left: 0%;
   }
 
@@ -312,8 +315,12 @@ nav ul li ul li {
     padding-left: 25%;
   }
 
+  .bio-picture {
+    width: 50%;
+  }
+
   .bio-picture img {
-    width: 60%;
+    width: 70%;
     max-height: 100%;
   }
 
@@ -335,6 +342,8 @@ nav ul li ul li {
   }
 
   p.no-margin-top {
+    max-width: 90%;
     margin-top: 0;
+    padding-top: 0px;
   }
 }
