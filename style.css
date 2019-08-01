@@ -72,6 +72,7 @@ nav {
   color: #fff;
   text-decoration: none;
   letter-spacing: 2px;
+  padding: .25em .75em;
   filter: drop-shadow(2px 2px 0.1rem #222);
 }
 
@@ -111,7 +112,7 @@ nav ul li ul {
 }
 
 nav ul li ul li {
-  padding: 20px 15px;
+  padding: 20px 0;
 }
 
 /* wrap for main content */
@@ -241,7 +242,7 @@ nav ul li ul li {
   .nav-links li {
     opacity: 0;
     list-style: none;
-    padding-top: 50px;
+    margin: 30px;
   }
 
   nav ul li {
@@ -307,14 +308,14 @@ nav ul li ul li {
     text-transform: uppercase;
   }
 
+  .submenu-item a {
+    text-transform: none;
+  }
+
   nav ul {
     font-size: 0;
     margin: 0;
     padding: 0;
-  }
-
-  nav ul li {
-    padding: 0px 10px;
   }
 
   .main-content {
