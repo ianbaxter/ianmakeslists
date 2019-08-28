@@ -184,6 +184,12 @@ nav ul li ul li {
   max-height: 50%;
 }
 
+#happy-alarm-icon {
+  max-width: 40px;
+  max-height: 40px;
+  padding-right: 16px;
+}
+
 .content-description {
   max-width: 90%;
   vertical-align: top;
