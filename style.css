@@ -44,12 +44,24 @@ h1 {
 }
 
 /* Project header title */
-#h2 {
+#happy-alarm-title {
   text-align: center;
   font-size: 40px;
   font-family: 'Montserrat', sans-serif;
   color: #4fb3bf;
   padding-top: 40px;
+  text-shadow: 2px 2px 3px lightgrey;
+}
+
+#noiser-title {
+  color: rgb(65, 64, 64);
+  font-family: Helvetica, sans-serif;
+  font-size: 40px;
+  font-style: italic;
+  letter-spacing: 16px;
+  text-align: center;
+  padding-top: 40px;
+  text-shadow: 3px 3px 0px grey, 6px 6px 0px rgba(173, 171, 171, 0.801), 9px 9px 0px rgb(216, 216, 216);
 }
 
 
@@ -164,6 +176,7 @@ nav ul li ul li {
   width: 100%;
   max-width: 50%;
   max-height: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .google-play-badge img {
@@ -192,10 +205,11 @@ nav ul li ul li {
   text-align: center;
   color: black;
   padding: 40px;
+  padding-top: 0;
   border: 1px outset #222;
   border-right: none;
   border-left: none;
-  border-bottom: none;
+  border-top: none;
 }
 
 .footer {
