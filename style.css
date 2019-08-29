@@ -3,6 +3,10 @@
   padding: 0px;
 }
 
+:focus {
+  outline: 0;
+}
+
 /* Remove link highlight effect */
 a {
   -webkit-tap-highlight-color: transparent;
@@ -21,7 +25,7 @@ p.hidden-text {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background: radial-gradient(rgb(219, 220, 223), rgb(232, 232, 235));
+  background: radial-gradient(rgb(221, 222, 224), rgb(234, 234, 236));
 }
 
 /* Parallax effect on background header image */
@@ -48,10 +52,10 @@ h1 {
   text-align: center;
   font-size: 40px;
   font-family: 'Montserrat', sans-serif;
-  color: #4fb3bf;
+  color: #00838f;
   padding-top: 40px;
-  text-shadow: 2px 2px 3px lightgrey;  
   border-top: 1px outset #222;
+  text-shadow: 2px 2px 2px rgb(196, 196, 196);  
 }
 
 #noiser-title {
@@ -72,6 +76,7 @@ h1 {
   text-align: center;
   padding-top: 40px;
   border-top: 1px outset #222;
+  text-shadow: 2px 2px 2px rgb(196, 196, 196);  
 }
 
 
@@ -101,6 +106,7 @@ nav {
 
 .nav-links a:hover {
   color: aqua;
+  text-shadow: 2px 2px 2px #222;  
 }
 
 .nav-menu {
@@ -142,12 +148,11 @@ nav ul li ul li {
 /* wrap for main content */
 .main-content-wrap {
   flex: 1;
-  font-family: adobe-garamond-pro;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   color: rgba(0,0,0,.67);
   font-size: 18px;
   line-height: 1.6em;
-  /* background: radial-gradient(rgb(155,162,180), rgb(123,162,205)); */
 }
 
 .main-content {
@@ -185,6 +190,7 @@ nav ul li ul li {
 
 .content-block a:hover {
   color: aqua;
+  text-shadow: 2px 2px 2px #222;  
 }
 
 .bio-picture img {
@@ -212,20 +218,20 @@ nav ul li ul li {
 }
 
 .content-description {
-  max-width: 90%;
+  padding-left: 7.5%;
+  max-width: 85%;
   vertical-align: top;
   overflow: hidden;
   text-align: left;
-  padding-left: 5%;
 }
 
 .screenshot-description {
+  padding-left: 7.5%;
   font-size: 20px;
-  max-width: 90%;
+  max-width: 85%;
   vertical-align: top;
   overflow: hidden;
   text-align: center;
-  padding-left: 5%;
 }
 
 .secondary-content {
