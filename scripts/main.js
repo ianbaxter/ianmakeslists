@@ -14,10 +14,22 @@ const navToggle = () => {
   const navBar = document.querySelector(".nav-links");
   const navLinks = document.querySelectorAll(".nav-links li");
   const body = document.querySelector("body");
+  const navLink = document.querySelectorAll(".nav-link");
   
 
   menu.addEventListener("click", () => {
     // Toggle navigation menu
+    navMenuToggle();
+  })
+
+  navLink.forEach((link) => link.addEventListener("click", () => {
+    if ($(window).width() <= 600) {
+      // Toggle navigation menu if link clicked in mobile view
+      navMenuToggle();
+    }
+  }))
+
+  function navMenuToggle() {
     if (navBar.classList.contains("nav-active")) {
       navBar.classList.remove("nav-active");
       body.classList.remove("fixedPosition");
@@ -37,7 +49,7 @@ const navToggle = () => {
 
     // Navigation menu animation
     menu.classList.toggle("toggle");
-  })
+  };
 }
 
 navToggle();
