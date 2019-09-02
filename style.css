@@ -161,6 +161,7 @@ nav ul li ul {
 
 nav ul li ul li {
   padding: 20px 0;
+  width: auto;
 }
 
 /* wrap for main content */
@@ -408,8 +409,7 @@ nav ul li ul li {
   }
 
   #noiser-picture img { 
-    width: 35%;
-    min-width: 25%;
+    width: 40%;
     max-height: 100%;
   }
 
@@ -440,7 +440,21 @@ nav ul li ul li {
     width: 80vw;
   }
 
+  .carousel-item {
+    max-width: 25vw;
+    min-width: 432px;
+  }
+
   .carousel-inner img{
-    width: 20vw;
+    width: 70%;
+  }
+
+  .carousel-wrapper {
+    margin: auto;
+  }
+
+  .carousel-caption {
+    left: 0;
+    width: auto;
   }
 }
