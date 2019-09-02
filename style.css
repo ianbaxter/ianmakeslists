@@ -1,8 +1,9 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
+/* Removed keyboard accessibility lines until a better method is found */
 :focus {
   outline: 0;
 }
@@ -13,12 +14,8 @@ a {
 }
 
 p {
-  padding: 20px 0px;
-  font-size: 20px;
-}
-
-p.hidden-text {
-  display: none;
+  padding: 20px 0;
+  font-size: 18px;
 }
 
 .content-wrap {
@@ -47,26 +44,56 @@ h1 {
   filter: drop-shadow(2px 2px 0.1rem #222);
 }
 
+#nav-projects {
+  color: white;
+}
+
+#happy-alarm-section {
+  background: radial-gradient(#4fb3bf, #00838f);
+  justify-content: center;
+}
+
 /* Project header title */
 #happy-alarm-title {
-  text-align: center;
+  color: white;
+  font-family: Helvetica, sans-serif;
   font-size: 40px;
-  font-family: 'Montserrat', sans-serif;
-  color: #00838f;
+  text-align: center;
   padding-top: 40px;
-  border-top: 1px outset #222;
-  text-shadow: 2px 2px 2px rgb(196, 196, 196);  
+  text-shadow: 2px 2px 2px rgb(138, 137, 137); 
+}
+
+#alarm-description {
+  color: white;
+  text-shadow: 2px 2px 2px rgb(138, 137, 137);
+  padding-left: 15%;
+  text-align: left;
+  width: 85vw;
+}
+
+#noiser-section {
+  background: radial-gradient(rgb(255, 204, 103), rgb(255, 177, 31));
+  align-content: center;
 }
 
 #noiser-title {
   color: rgb(65, 64, 64);
   font-family: Helvetica, sans-serif;
   font-size: 40px;
-  font-style: italic;
-  letter-spacing: 16px;
   text-align: center;
   padding-top: 40px;
-  text-shadow: 3px 3px 0px grey, 6px 6px 0px rgba(173, 171, 171, 0.801), 9px 9px 0px rgb(216, 216, 216);
+  text-shadow: 2px 2px 2px rgb(138, 137, 137);  
+}
+
+#noiser-description {
+  color: black;
+  text-align: left;
+  padding-left: 7.5vw;
+  width: 90vw;
+}
+
+#noiser-picture img {
+  margin-bottom: 10px;
 }
 
 #about-title {
@@ -74,12 +101,9 @@ h1 {
   font-family: Helvetica, sans-serif;
   font-size: 40px;
   text-align: center;
-  padding-top: 40px;
-  border-top: 1px outset #222;
+  padding: 40px 0 20px 0;
   text-shadow: 2px 2px 2px rgb(196, 196, 196);  
 }
-
-
 
 /* Navigation text styling */
 nav {
@@ -97,6 +121,7 @@ nav {
 }
 
 .nav-links a {
+  display: flex;
   color: #fff;
   text-decoration: none;
   letter-spacing: 2px;
@@ -130,14 +155,13 @@ nav ul li a {
   color: #fff;
   font-size: 20px;
   transition: 0.3s linear;
-  justify-content: center
+  justify-content: center;
 }
 
 nav ul li ul {
   display: none;
   position: absolute;
   width: 200px;
-  text-align: center;
   background: #373737;
 }
 
@@ -199,10 +223,13 @@ nav ul li ul li {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.content-picture img {
-  width: 100%;
-  max-width: 50%;
-  max-height: 50%;
+#noiser-picture img {
+  max-width: 85%;
+  max-height: 85%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.carousel-picture {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -211,27 +238,11 @@ nav ul li ul li {
   max-height: 50%;
 }
 
-#happy-alarm-icon {
-  max-width: 40px;
-  max-height: 40px;
-  padding-right: 16px;
-}
-
-.content-description {
+.bio-description {
   padding-left: 7.5%;
-  max-width: 85%;
+  max-width: 90%;
   vertical-align: top;
-  overflow: hidden;
   text-align: left;
-}
-
-.screenshot-description {
-  padding-left: 7.5%;
-  font-size: 20px;
-  max-width: 85%;
-  vertical-align: top;
-  overflow: hidden;
-  text-align: center;
 }
 
 .secondary-content {
@@ -239,7 +250,6 @@ nav ul li ul li {
   color: black;
   padding: 40px;
   padding-top: 0;
-  border-bottom: 1px outset #222;
 }
 
 .footer {
@@ -265,6 +275,33 @@ nav ul li ul li {
 
 .dev-svg {
   max-width: 3em;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+ 
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;  
+  
+}
+
+.carousel-inner img{
+  width: 70vw; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.carousel-caption {
+  position: relative;
+  bottom: 0;
+  color: rgba(0,0,0,.67);
+  width: 70vw;
+}
+
+.carousel-caption p {
+  margin: 0;
+  color: white;
+  text-shadow: 2px 2px 2px rgb(138, 137, 137); 
 }
 
 @media only screen and (max-width: 600px) {
@@ -309,11 +346,6 @@ nav ul li ul li {
 
   body {
     overflow-x: hidden;
-  }
-
-  p.hidden-text {
-    visibility: hidden;
-    display: block;
   }
 }
 
@@ -361,6 +393,14 @@ nav ul li ul li {
     text-transform: uppercase;
   }
 
+  p {
+    font-size: 20px;
+  }
+
+  p.left-text {
+    padding-left: 20%;
+  } 
+
   .submenu-item a {
     text-transform: none;
   }
@@ -372,17 +412,17 @@ nav ul li ul li {
   }
 
   .main-content {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  #about-content {
     flex-direction: row;
   }
 
-  .content-description {
+  .bio-description {
     width: 50%;
     padding-left: 0%;
-  }
-
-  .screenshot-description {
-    max-width: 50%;
-    padding-left: 25%;
   }
 
   .bio-picture {
@@ -392,6 +432,12 @@ nav ul li ul li {
   .bio-picture img {
     max-width: 55%;
     min-width: 55%;
+    max-height: 100%;
+  }
+
+  #noiser-picture img { 
+    width: 35%;
+    min-width: 25%;
     max-height: 100%;
   }
 
@@ -408,5 +454,21 @@ nav ul li ul li {
     max-width: 90%;
     margin-top: 0;
     padding-top: 0px;
+  }
+
+  .carousel-inner img{
+    width: 20vw;
+  }
+
+  #noiser-description {
+    padding-left: 20vw;
+    text-align: center;
+    width: 80vw;
+  }
+
+  #alarm-description {
+    padding-left: 20vw;
+    text-align: center;
+    width: 80vw;
   }
 }
