@@ -52,8 +52,8 @@ const navToggle = () => {
   };
 
   // Select all links with hashes
-  $('a[href*="#"]:not([href="#"]):not([href="#0"])')
   // Remove links that don't actually link to anything
+  $('a[href*="#"]:not([href="#"]):not([href="#0"]):not([href="#carouselExampleIndicators"])')
   .click(function(event) {
     // On-page links
     if (

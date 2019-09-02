@@ -68,7 +68,7 @@ h1 {
 }
 
 #noiser-section {
-  background: radial-gradient(rgb(255, 204, 103), rgb(255, 177, 31));
+  background: radial-gradient(rgb(255, 206, 107), rgb(255, 182, 46));
 }
 
 #noiser-title {
@@ -77,7 +77,7 @@ h1 {
   font-size: 40px;
   text-align: center;
   padding-top: 40px;
-  text-shadow: 2px 2px 2px rgb(138, 137, 137);  
+  text-shadow: 2px 2px 2px rgb(185, 176, 138);  
 }
 
 #noiser-description {
@@ -177,7 +177,6 @@ nav ul li ul li {
   display: flex;
   flex-direction: column;
   padding: 40px 0px;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -224,7 +223,6 @@ nav ul li ul li {
 .bio-description {
   padding-left: 7.5%;
   max-width: 90%;
-  vertical-align: top;
   text-align: left;
 }
 
@@ -243,7 +241,6 @@ nav ul li ul li {
 
 .social-links {
   text-align: center;
-  margin: 0 auto;
 }
 
 #social-link {
@@ -283,8 +280,13 @@ nav ul li ul li {
 
 .carousel-caption p {
   margin: 0;
-  color: white;
-  text-shadow: 2px 2px 2px rgb(138, 137, 137); 
+  color: rgb(234, 234, 236);
+  text-shadow: 2px 2px 2px rgb(138, 137, 137);
+  overflow: hidden;
+}
+
+.carousel-item {
+
 }
 
 @media only screen and (max-width: 600px) {
