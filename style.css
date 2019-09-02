@@ -144,12 +144,10 @@ nav {
 }
 
 nav ul li a {
-  display:  flex;
   cursor: pointer;
   color: #fff;
   font-size: 20px;
   transition: 0.3s linear;
-  justify-content: center;
 }
 
 nav ul li ul {
@@ -157,11 +155,6 @@ nav ul li ul {
   position: absolute;
   width: 200px;
   background: #373737;
-}
-
-nav ul li ul li {
-  padding: 20px 0;
-  width: auto;
 }
 
 /* wrap for main content */
@@ -371,13 +364,21 @@ nav ul li ul li {
     text-transform: uppercase;
   }
 
+  nav ul li ul li {
+    padding: 20px 0;
+  }
+
+  nav ul li a {
+    justify-content: center;
+  }
+
   p {
     font-size: 20px;
   }
 
   p.left-text {
     padding-left: 20%;
-  } 
+  }
 
   .submenu-item a {
     text-transform: none;
