@@ -125,6 +125,9 @@ nav {
   align-items: center;
   width: 100%;
   transform: translateX(100%);
+}
+
+.nav-transform { 
   transition: transform 0.2s ease-in;
 }
 
@@ -317,7 +320,7 @@ nav ul li ul {
   }
   to {
     opacity: 1;
-    transform: translateX(0px)
+    transform: translateX(0px);
   }
 }
 
@@ -435,7 +438,7 @@ nav ul li ul {
   }
 
   .content-block a {
-    font-size: 6.5vw;
+    font-size: 9.5vh;
   }
 
   p.no-margin-top {

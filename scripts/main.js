@@ -16,6 +16,8 @@ const navToggle = () => {
   const body = document.querySelector("body");
   const navLink = document.querySelectorAll(".nav-link");
   
+  // Add transform to menu after page load to prevent initial menu transform
+  navBar.classList.add("nav-transform");
 
   menu.addEventListener("click", () => {
     // Toggle navigation menu
