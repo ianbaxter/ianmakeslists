@@ -3,11 +3,12 @@
   padding: 0;
 }
 
+/* Hide x overflow containing nav menu */
 body {
   overflow-x: hidden;
 }
 
-/* Removed keyboard accessibility lines until a better method is found */
+/* Removed keyboard accessibility focus until a better method is found */
 :focus {
   outline: 0;
 }
@@ -22,6 +23,7 @@ p {
   font-size: 18px;
 }
 
+/* Make content fill all screen sizes to ensure footer is at bottom */
 .content-wrap {
   min-height: 100vh;
   background: radial-gradient(rgb(221, 222, 224), rgb(234, 234, 236));
