@@ -8,6 +8,19 @@ $('nav li').hover(
     }
 );
 
+// Content scroll fade in
+function scrollFade() {
+  let aboutContent = document.querySelector(".about-content");
+  let aboutPosition = aboutContent.getBoundingClientRect().top;
+  let screenPosition = window.innerHeight / 1.2;
+
+  if (aboutPosition < screenPosition) {
+    aboutContent.classList.add("about-fade-in");
+  }
+}
+
+window.addEventListener("scroll", scrollFade);
+
 // Sliding navigation menu animation
 const navToggle = () => {
   const menu = document.querySelector(".nav-menu");

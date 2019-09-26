@@ -410,8 +410,16 @@ nav ul li ul {
     padding: 0;
   }
   
-  #about-content {
+  .about-content {
     flex-direction: row;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.5s all ease-in-out;
+  }
+
+  .about-fade-in {
+    opacity: 1;
+    transform: translateY(0px);
   }
 
   .bio-description {
