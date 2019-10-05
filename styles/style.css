@@ -8,11 +8,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Removed keyboard accessibility focus until a better method is found */
-:focus {
-  outline: 0;
-}
-
 /* Remove link highlight effect */
 a {
   -webkit-tap-highlight-color: transparent;
@@ -210,15 +205,13 @@ nav ul li ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 auto;
-  text-align: center;
   height: 86vh;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  text-align: center;
 }
 
 .top-content a {
-  font-size: 100px;
   font-size: 15vw;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
@@ -242,7 +235,11 @@ nav ul li ul {
   line-height: 1.6em;
 }
 
-.main-content {
+#happy-alarm-section {
+  background: radial-gradient(#4fb3bf, #00838f);
+}
+
+#happy-alarm-section .happy-alarm-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -252,10 +249,6 @@ nav ul li ul {
           flex-direction: column;
   padding: 40px 0px;
   text-align: center;
-}
-
-#happy-alarm-section {
-  background: radial-gradient(#4fb3bf, #00838f);
 }
 
 #happy-alarm-section h2 {
@@ -306,12 +299,24 @@ nav ul li ul {
 }
 
 .google-play-badge img {
-  padding-top: 40px;
+  margin-top: 40px;
   max-width: 50%;
   max-height: 50%;
 }
 
 #noiser-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 40px 0px;
   background: radial-gradient(#ffce6b, #ffb62e);
 }
 
@@ -319,7 +324,6 @@ nav ul li ul {
   color: #414040;
   font-family: Helvetica, sans-serif;
   font-size: 40px;
-  text-align: center;
   padding-top: 40px;
   text-shadow: 2px 2px 2px #b9b08a;
 }
@@ -337,6 +341,18 @@ nav ul li ul {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
+}
+
+#about-section .about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px 0px;
+  text-align: center;
 }
 
 #about-section h2 {
