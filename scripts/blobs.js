@@ -5,8 +5,8 @@ let width = (canvas.width = innerWidth);
 let height = (canvas.height = innerHeight);
 let screenSize = Math.sqrt(width * width + height * height);
 const background = ctx.createLinearGradient(width, 0, width, height);
-background.addColorStop(0, "rgb(234, 234, 236)");
-background.addColorStop(1, "rgb(221, 222, 224)");
+background.addColorStop(0, "rgb(34, 34, 34)");
+background.addColorStop(1, "rgb(34, 34, 34)");
 
 // Check platform
 let isMobile = false;
