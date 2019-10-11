@@ -1,4 +1,5 @@
 $imgShadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+$primaryBackgroundColor: rgb(221, 222, 224), rgb(234, 234, 236);
 
 * {
   margin: 0;
@@ -23,7 +24,7 @@ p {
 /* Make content fill all screen sizes to ensure footer is at bottom */
 .content-wrap {
   min-height: 100vh;
-  background: radial-gradient(rgb(221, 222, 224), rgb(234, 234, 236));
+  background: radial-gradient($primaryBackgroundColor);
 }
 
 h1 {
@@ -39,7 +40,8 @@ h1 {
 
 /* Navigation text styling */
 nav {
-  background: linear-gradient(rgb(61, 141, 226), rgb(73, 154, 221));
+  // background: linear-gradient(rgb(80, 150, 224), rgb(92, 163, 221));
+  background: #222;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -74,6 +76,7 @@ nav {
   align-items: center;
   width: 100%;
   transform: translateX(100%);
+  z-index: 1;
   li {
     opacity: 0;
     list-style: none;
@@ -87,7 +90,7 @@ nav {
     padding: 1.5vh 0.75em;
     filter: drop-shadow(2px 2px 0.1rem #222);
     &:hover {
-      text-shadow: 2px 2px 2px #222;
+      text-shadow: 2px 2px 20px rgb(255, 255, 255);
     }
   }
 }
@@ -110,8 +113,7 @@ nav {
 }
 
 .submenu-item a:hover {
-  color: aqua;
-  text-shadow: 2px 2px 2px #222;
+  text-shadow: 2px 2px 20px rgb(255, 255, 255);
 }
 
 /* Fix position toggle for navigation menu */
@@ -151,20 +153,43 @@ nav {
 
 .top-content {
   display: flex;
-  flex-direction: column;
   height: 86vh;
   justify-content: space-around;
   text-align: center;
+  z-index: -3;
   a {
     font-size: 15vw;
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
-    color: rgba(0, 0, 0, 0.85);
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 2px 2px 20px #222;
     &:hover {
-      color: aqua;
-      text-shadow: 2px 2px 2px #222;
+      // color: aqua;
+      text-shadow: 2px 2px 6px #fff;
     }
   }
+}
+
+canvas {
+  position: absolute;
+  top: 14vh;
+  left: 0;
+  height: 86vh;
+  width: 100vw;
+  opacity: 0;
+  transition: 0.03s all ease-out;
+}
+
+.canvas-fade-in {
+  opacity: 1;
+  transition: 1.5s all ease-in-out;
+}
+
+#top-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 0;
 }
 
 /* wrap for main content */
@@ -242,8 +267,10 @@ nav {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 40px 0px;
   background: radial-gradient(rgb(255, 206, 107), rgb(255, 182, 46));
+  .noiser-content {
+    padding: 40px 0px;
+  }
   h2 {
     color: rgb(65, 64, 64);
     font-family: Helvetica, sans-serif;
@@ -295,12 +322,12 @@ nav {
   }
 }
 
-.footer {
+#footer {
   width: 100%;
   height: 80px;
   background-color: #222;
   text-align: center;
-  #social-link {
+  .social-link {
     padding-top: 20px;
   }
 }

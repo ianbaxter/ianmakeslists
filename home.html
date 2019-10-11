@@ -35,11 +35,14 @@
             </div>                    
         </nav>
         <div class="top-content">
-            <div>
-                <a href="#happy-alarm-section">PROJECTS</a>
-            </div>
-            <div>
-                <a href="#about-section">ABOUT</a>
+            <canvas></canvas>
+            <div id="top-links">
+                <div>
+                    <a href="#happy-alarm-section">PROJECTS</a>
+                </div>
+                <div>
+                    <a href="#about-section">ABOUT</a>
+                </div>
             </div>
         </div>
         <div class="main-content-wrap">     
@@ -97,9 +100,11 @@
             </div>
             <div id="noiser-section">
                 <h2>Noiser</h2> 
-                <p>Noiser is a synthesiser that uses the Web Audio API to create earthshattering dubbed out noise.</p>
-                <div>
-                    <a href="https://ianbaxter.github.io/noiser/"><img src="images/noiser-screenshot.png" alt="screenshot of noiser synth" /></a>
+                <div class="noiser-content" >
+                    <p>Noiser is a synthesiser that uses the Web Audio API to create earthshattering dubbed out noise.</p>
+                    <div>
+                        <a href="https://ianbaxter.github.io/noiser/"><img src="images/noiser-screenshot.png" alt="screenshot of noiser synth" /></a>
+                    </div>
                 </div>
             </div>
             <div id="about-section">
@@ -134,12 +139,13 @@
                 </div>   
             </div>
         </div>
-        <div class="footer">
-            <div id="social-link"><a href="https://github.com/ianbaxter"><img src="svg/github.svg" alt="github link" height="32px" width="32px"/></a></div>
+        <div id="footer">
+            <div class="social-link"><a href="https://github.com/ianbaxter"><img src="svg/github.svg" alt="github link" height="32px" width="32px"/></a></div>
         </div>
     </div>  
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="scripts/blobs.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

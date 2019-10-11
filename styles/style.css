@@ -38,8 +38,7 @@ h1 {
 
 /* Navigation text styling */
 nav {
-  background: -webkit-gradient(linear, left top, left bottom, from(#3d8de2), to(#499add));
-  background: linear-gradient(#3d8de2, #499add);
+  background: #222;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,6 +92,7 @@ nav ul li ul {
   width: 100%;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+  z-index: 1;
 }
 
 .nav-links li {
@@ -114,7 +114,7 @@ nav ul li ul {
 }
 
 .nav-links a:hover {
-  text-shadow: 2px 2px 2px #222;
+  text-shadow: 2px 2px 20px white;
 }
 
 .nav-transform {
@@ -141,8 +141,7 @@ nav ul li ul {
 }
 
 .submenu-item a:hover {
-  color: aqua;
-  text-shadow: 2px 2px 2px #222;
+  text-shadow: 2px 2px 20px white;
 }
 
 /* Fix position toggle for navigation menu */
@@ -201,26 +200,53 @@ nav ul li ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   height: 86vh;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   text-align: center;
+  z-index: -3;
 }
 
 .top-content a {
   font-size: 15vw;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
-  color: rgba(0, 0, 0, 0.85);
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 2px 2px 20px #222;
 }
 
 .top-content a:hover {
-  color: aqua;
-  text-shadow: 2px 2px 2px #222;
+  text-shadow: 2px 2px 6px #fff;
+}
+
+canvas {
+  position: absolute;
+  top: 14vh;
+  left: 0;
+  height: 86vh;
+  width: 100vw;
+  opacity: 0;
+  -webkit-transition: 0.03s all ease-out;
+  transition: 0.03s all ease-out;
+}
+
+.canvas-fade-in {
+  opacity: 1;
+  -webkit-transition: 1.5s all ease-in-out;
+  transition: 1.5s all ease-in-out;
+}
+
+#top-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 0;
 }
 
 /* wrap for main content */
@@ -316,8 +342,11 @@ nav ul li ul {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  padding: 40px 0px;
   background: radial-gradient(#ffce6b, #ffb62e);
+}
+
+#noiser-section .noiser-content {
+  padding: 40px 0px;
 }
 
 #noiser-section h2 {
@@ -381,14 +410,14 @@ nav ul li ul {
   max-width: 3em;
 }
 
-.footer {
+#footer {
   width: 100%;
   height: 80px;
   background-color: #222;
   text-align: center;
 }
 
-.footer #social-link {
+#footer .social-link {
   padding-top: 20px;
 }
 
