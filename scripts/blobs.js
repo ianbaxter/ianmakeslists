@@ -8,17 +8,6 @@ const background = ctx.createLinearGradient(width, 0, width, height);
 background.addColorStop(0, "rgb(234, 234, 236)");
 background.addColorStop(1, "rgb(221, 222, 224)");
 
-// Variables
-const mouse = { x: innerWidth / 2, y: innerHeight / 2 };
-const numOfBlobs = 100;
-let isMouseMoving = true;
-let lastPosition = {
-  x: 0,
-  y: 0,
-  mouseSpeed: 0,
-  mouseAcceleration: 0
-};
-
 // Check platform
 let isMobile = false;
 if (
@@ -32,18 +21,30 @@ if (
   isMobile = true;
 }
 
+// Variables
+const mouse = { x: innerWidth / 2, y: innerHeight / 2 };
+const numOfBlobs = 100;
+let isMouseMoving = true;
+let lastPosition = {
+  x: 0,
+  y: 0,
+  mouseSpeed: 0,
+  peakMouseAcceleration: 0
+};
+
 // Event listeners for mouse control
 window.addEventListener("mousemove", event => {
-  // Deccelerate animation when mouse stops moving and
   isMouseMoving = true;
+
+  // Deccelerate animation when mouse stops moving
   setTimeout(() => {
     isMouseMoving = false;
     setInterval(() => {
-      if (lastPosition.mouseAcceleration > 1) {
-        lastPosition.mouseAcceleration /= 1.001;
+      if (lastPosition.peakMouseAcceleration > 1) {
+        lastPosition.peakMouseAcceleration /= 1.001;
       }
     }, 100);
-  }, 800);
+  }, 1);
 
   // Determine mouse acceleration
   mouse.x = event.clientX;
@@ -55,12 +56,16 @@ window.addEventListener("mousemove", event => {
   let prevMouseSpeed = lastPosition.mouseSpeed;
   let mouseAcceleration = Math.abs(10 * (mouseSpeed - prevMouseSpeed));
 
-  lastPosition = {
-    x: event.clientX,
-    y: event.clientY,
-    mouseSpeed: mouseSpeed,
-    mouseAcceleration: mouseAcceleration
-  };
+  lastPosition.x = event.clientX;
+  lastPosition.y = event.clientY;
+  lastPosition.mouseSpeed = mouseSpeed;
+
+  if (
+    mouseAcceleration > lastPosition.peakMouseAcceleration &&
+    mouseAcceleration < 12000
+  ) {
+    lastPosition.peakMouseAcceleration = mouseAcceleration;
+  }
 });
 
 // Util functions
@@ -78,7 +83,7 @@ function Blob(x, y, radius, color) {
   this.velocity = 0;
 
   this.update = () => {
-    this.velocity = lastPosition.mouseAcceleration / 100000;
+    this.velocity = lastPosition.peakMouseAcceleration / 200000;
     this.radians += this.velocity;
 
     this.x = x + (Math.cos(this.radians) * width) / 6;
@@ -113,7 +118,18 @@ function init() {
     blobs.push(blob);
   }
 
-  canvas.classList.add("canvas-fade-in");
+  ctx.fillStyle = background;
+  ctx.fillRect(0, 0, width, height);
+
+  blobs.forEach(blob => {
+    blob.update();
+  });
+
+  if (!isMobile) {
+    canvas.classList.add("canvas-fade-in");
+  } else {
+    canvas.classList.add("canvas-fade-in-mobile");
+  }
 }
 
 // Animation loop
@@ -125,13 +141,8 @@ function loop() {
     blob.update();
   });
 
-  if (!isMobile) {
-    requestAnimationFrame(loop);
-  }
+  requestAnimationFrame(loop);
 }
-
-init();
-loop();
 
 // Resize blobs on window resize
 let addEvent = function(object, type, callback) {
@@ -155,3 +166,9 @@ addEvent(window, "resize", function(event) {
     canvas.classList.add("canvas-fade-in");
   }, 300);
 });
+
+init();
+
+if (!isMobile) {
+  loop();
+}
