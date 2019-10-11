@@ -145,7 +145,7 @@ function loop() {
 }
 
 // Resize blobs on window resize
-let addEvent = function(object, type, callback) {
+let onResize = function(object, type, callback) {
   if (object == null || typeof object == "undefined") return;
   if (object.addEventListener) {
     object.addEventListener(type, callback, false);
@@ -156,19 +156,19 @@ let addEvent = function(object, type, callback) {
   }
 };
 
-addEvent(window, "resize", function(event) {
-  canvas.classList.remove("canvas-fade-in");
-  width = canvas.width = innerWidth;
-  height = canvas.height = innerHeight;
-  screenSize = Math.sqrt(width * width + height * height);
-  setTimeout(() => {
-    init();
-    canvas.classList.add("canvas-fade-in");
-  }, 300);
-});
-
 init();
 
 if (!isMobile) {
+  onResize(window, "resize", function(event) {
+    canvas.classList.remove("canvas-fade-in");
+    width = canvas.width = innerWidth;
+    height = canvas.height = innerHeight;
+    screenSize = Math.sqrt(width * width + height * height);
+    setTimeout(() => {
+      init();
+      canvas.classList.add("canvas-fade-in");
+    }, 300);
+  });
+
   loop();
 }
