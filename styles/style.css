@@ -25,11 +25,18 @@ p {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 70px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 24px;
   letter-spacing: 1px;
   color: #ffffff;
-  -webkit-filter: drop-shadow(2px 2px 0.1rem #222);
-          filter: drop-shadow(2px 2px 0.1rem #222);
+  margin-bottom: 0;
 }
 
 #nav-projects {
@@ -47,7 +54,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 14vh;
+  min-height: 12vh;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -58,7 +65,7 @@ nav ul li {
 nav ul li a {
   cursor: pointer;
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
 }
@@ -76,8 +83,8 @@ nav ul li ul {
   display: flex;
   position: fixed;
   right: 0px;
-  top: 14vh;
-  height: 86vh;
+  top: 12vh;
+  height: 88vh;
   -webkit-box-pack: unset;
       -ms-flex-pack: unset;
           justify-content: unset;
@@ -200,7 +207,7 @@ nav ul li ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 86vh;
+  height: 88vh;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   text-align: center;
@@ -208,23 +215,16 @@ nav ul li ul {
   background: #222;
 }
 
-.top-content a {
-  font-size: 15vw;
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  color: rgba(255, 255, 255, 0.85);
-  text-shadow: 2px 2px 20px #222;
-}
-
-.top-content a:hover {
-  text-shadow: 2px 2px 6px #fff;
+.top-content span {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
 }
 
 canvas {
   position: absolute;
-  top: 14vh;
+  top: 12vh;
   left: 0;
-  height: 86vh;
+  height: 88vh;
   width: 100vw;
   opacity: 0;
   -webkit-transition: 0.03s all ease-out;
@@ -282,7 +282,7 @@ canvas {
   text-align: center;
 }
 
-#happy-alarm-section h2 {
+#happy-alarm-section h3 {
   color: white;
   font-family: Helvetica, sans-serif;
   font-size: 40px;
@@ -354,7 +354,7 @@ canvas {
   padding: 40px 0px;
 }
 
-#noiser-section h2 {
+#noiser-section h3 {
   color: #414040;
   font-family: Helvetica, sans-serif;
   font-size: 40px;
@@ -389,7 +389,7 @@ canvas {
   text-align: center;
 }
 
-#about-section h2 {
+#about-section h3 {
   color: #414040;
   font-family: Helvetica, sans-serif;
   font-size: 40px;
@@ -435,7 +435,7 @@ canvas {
     display: none;
   }
   nav {
-    min-height: 14vh;
+    min-height: 12vh;
   }
   nav a {
     text-transform: uppercase;
@@ -528,16 +528,6 @@ canvas {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    opacity: 0;
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-    -webkit-transition: 0.5s all ease-in-out;
-    transition: 0.5s all ease-in-out;
-  }
-  #about-section .about-fade-in {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
   }
   #about-section .bio-info {
     width: 50%;

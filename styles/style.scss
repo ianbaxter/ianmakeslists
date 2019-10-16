@@ -28,10 +28,18 @@ p {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 70px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 24px;
   letter-spacing: 1px;
   color: #ffffff;
-  filter: drop-shadow(2px 2px 0.1rem #222);
+  margin-bottom: 0;
 }
 
 #nav-projects {
@@ -45,14 +53,14 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 14vh;
+  min-height: 12vh;
   font-family: "Montserrat", sans-serif;
   ul li {
     width: 65%;
     a {
       cursor: pointer;
       color: #fff;
-      font-size: 20px;
+      font-size: 18px;
       transition: 0.3s linear;
     }
     ul {
@@ -68,8 +76,8 @@ nav {
   display: flex;
   position: fixed;
   right: 0px;
-  top: 14vh;
-  height: 86vh;
+  top: 12vh;
+  height: 88vh;
   justify-content: unset;
   background: #373737;
   flex-direction: column;
@@ -153,29 +161,22 @@ nav {
 
 .top-content {
   display: flex;
-  height: 86vh;
+  height: 88vh;
   justify-content: space-around;
   text-align: center;
   z-index: -3;
   background: #222;
-  a {
-    font-size: 15vw;
-    text-decoration: none;
-    font-family: "Montserrat", sans-serif;
-    color: rgba(255, 255, 255, 0.85);
-    text-shadow: 2px 2px 20px #222;
-    &:hover {
-      // color: aqua;
-      text-shadow: 2px 2px 6px #fff;
-    }
+  span {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
   }
 }
 
 canvas {
   position: absolute;
-  top: 14vh;
+  top: 12vh;
   left: 0;
-  height: 86vh;
+  height: 88vh;
   width: 100vw;
   opacity: 0;
   transition: 0.03s all ease-out;
@@ -215,7 +216,7 @@ canvas {
     padding: 40px 0px;
     text-align: center;
   }
-  h2 {
+  h3 {
     color: white;
     font-family: Helvetica, sans-serif;
     font-size: 40px;
@@ -276,7 +277,7 @@ canvas {
   .noiser-content {
     padding: 40px 0px;
   }
-  h2 {
+  h3 {
     color: rgb(65, 64, 64);
     font-family: Helvetica, sans-serif;
     font-size: 40px;
@@ -304,7 +305,7 @@ canvas {
     padding: 40px 0px;
     text-align: center;
   }
-  h2 {
+  h3 {
     color: rgb(65, 64, 64);
     font-family: Helvetica, sans-serif;
     font-size: 40px;
@@ -348,7 +349,7 @@ canvas {
   }
 
   nav {
-    min-height: 14vh;
+    min-height: 12vh;
     a {
       text-transform: uppercase;
     }
@@ -445,13 +446,6 @@ canvas {
   #about-section {
     .about-content {
       flex-direction: row;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: 0.5s all ease-in-out;
-    }
-    .about-fade-in {
-      opacity: 1;
-      transform: translateY(0px);
     }
     .bio-info {
       width: 50%;
