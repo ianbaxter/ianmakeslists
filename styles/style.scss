@@ -29,7 +29,6 @@ p {
 
 h1 {
   font-size: 70px;
-  text-decoration: none;
   font-family: "Montserrat", sans-serif;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 40px;
@@ -40,6 +39,13 @@ h2 {
   letter-spacing: 1px;
   color: #ffffff;
   margin-bottom: 0;
+}
+
+h3 {
+  margin-bottom: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 40px;
+  padding: 40px 0px;
 }
 
 #nav-projects {
@@ -159,13 +165,14 @@ nav {
   transform: rotate(45deg) translate(-6px, -10px);
 }
 
-.top-content {
+.header-section {
   display: flex;
   height: 88vh;
   justify-content: space-around;
   text-align: center;
   z-index: -3;
   background: #222;
+  padding: 0px 10px;
   span {
     color: rgba(255, 255, 255, 0.8);
     font-size: 20px;
@@ -191,7 +198,7 @@ canvas {
   opacity: 1;
 }
 
-#top-links {
+#header-content {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -209,27 +216,23 @@ canvas {
 }
 
 #happy-alarm-section {
+  text-align: center;
   background: radial-gradient(#4fb3bf, #00838f);
+  h3 {
+    color: white;
+    text-shadow: 2px 2px 2px rgb(138, 137, 137);
+  }
   .happy-alarm-content {
     display: flex;
     flex-direction: column;
-    padding: 40px 0px;
-    text-align: center;
-  }
-  h3 {
-    color: white;
-    font-family: Helvetica, sans-serif;
-    font-size: 40px;
-    text-align: center;
-    padding-top: 40px;
-    text-shadow: 2px 2px 2px rgb(138, 137, 137);
+    padding-bottom: 40px;
   }
 }
 
 #alarm-description {
   color: white;
   text-shadow: 2px 2px 2px rgb(138, 137, 137);
-  padding-left: 15%;
+  padding-left: 17.5%;
   text-align: left;
   width: 85vw;
 }
@@ -244,7 +247,7 @@ canvas {
 }
 
 .carousel-inner img {
-  width: 70vw;
+  width: 65vw;
   box-shadow: $imgShadow;
 }
 
@@ -269,30 +272,23 @@ canvas {
 }
 
 #noiser-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
   background: radial-gradient(rgb(255, 206, 107), rgb(255, 182, 46));
   .noiser-content {
-    padding: 40px 0px;
-  }
-  h3 {
-    color: rgb(65, 64, 64);
-    font-family: Helvetica, sans-serif;
-    font-size: 40px;
-    padding-top: 40px;
-    text-shadow: 2px 2px 2px rgb(185, 176, 138);
+    padding: 0px 20px 40px 20px;
+    h3 {
+      color: rgb(65, 64, 64);
+      text-shadow: 2px 2px 2px rgb(185, 176, 138);
+    }
   }
   p {
     color: black;
+    padding-left: 7.5%;
     text-align: left;
-    padding-left: 7.5vw;
-    width: 90vw;
+    width: 85vw;
   }
   img {
-    max-width: 85%;
-    max-height: 85%;
+    width: 85%;
     box-shadow: $imgShadow;
     margin-bottom: 10px;
   }
@@ -302,21 +298,19 @@ canvas {
   .about-content {
     display: flex;
     flex-direction: column;
-    padding: 40px 0px;
+    padding: 40px 20px 40px 20px;
     text-align: center;
   }
   h3 {
     color: rgb(65, 64, 64);
-    font-family: Helvetica, sans-serif;
-    font-size: 40px;
     text-align: center;
-    padding: 40px 0 20px 0;
     text-shadow: 2px 2px 2px rgb(196, 196, 196);
   }
   img {
     max-width: 85%;
     max-height: 85%;
     box-shadow: $imgShadow;
+    border-radius: 20px;
   }
   .bio-info {
     padding-left: 7.5%;
@@ -398,14 +392,18 @@ canvas {
     text-transform: none;
   }
 
-  .top-content a {
+  .header-section a {
     font-size: 9.5vh;
   }
 
-  #alarm-description {
-    padding-left: 20vw;
-    text-align: center;
-    width: 80vw;
+  .happy-alarm-content {
+    align-items: center;
+    #alarm-description {
+      text-align: center;
+      margin: auto 0;
+      padding: 0;
+      width: 50%;
+    }
   }
 
   .carousel-wrapper {
@@ -427,31 +425,38 @@ canvas {
   }
 
   .google-play-badge img {
-    max-width: 20%;
-    max-height: 20%;
+    max-width: 35%;
+    max-height: 35%;
   }
 
   #noiser-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     p {
-      padding-left: 20vw;
       text-align: center;
-      width: 80vw;
+      margin: 0 auto;
+      padding-bottom: 40px;
+      padding-left: 0;
     }
     img {
       width: 40%;
-      max-height: 100%;
     }
   }
 
   #about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .about-content {
       flex-direction: row;
+      width: 85%;
     }
     .bio-info {
       width: 50%;
       padding-left: 0%;
       p {
-        max-width: 90%;
+        max-width: 70%;
         margin-top: 0;
         padding-top: 0px;
       }
@@ -460,8 +465,7 @@ canvas {
     #bio-picture {
       width: 50%;
       img {
-        max-width: 55%;
-        min-width: 55%;
+        width: 55%;
         max-height: 100%;
       }
     }
