@@ -493,6 +493,21 @@ nav h2 {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  #about-section .about-content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #about-section .bio-info {
+    padding-left: 0px;
+    max-width: 70%;
+  }
+  #about-section #bio-picture {
+    width: 460px;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
   #about-section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -506,6 +521,9 @@ nav h2 {
             align-items: center;
   }
   #about-section .about-content {
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;

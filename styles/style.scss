@@ -376,10 +376,26 @@ nav {
   }
 
   #about-section {
+    .about-content {
+      align-items: center;
+    }
+    .bio-info {
+      padding-left: 0px;
+      max-width: 70%;
+    }
+    #bio-picture {
+      width: 460px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  #about-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     .about-content {
+      align-items: initial;
       flex-direction: row;
       width: 85%;
     }
@@ -392,7 +408,6 @@ nav {
         padding-top: 0px;
       }
     }
-
     #bio-picture {
       width: 50%;
       img {
