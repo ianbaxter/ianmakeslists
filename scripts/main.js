@@ -1,17 +1,3 @@
-// jQuery dropdown animations
-$("nav li").hover(
-  function() {
-    $("ul", this)
-      .stop()
-      .slideDown(200);
-  },
-  function() {
-    $("ul", this)
-      .stop()
-      .slideUp(200);
-  }
-);
-
 // Sliding navigation menu animation
 const navToggle = () => {
   const menu = document.querySelector(".nav-menu");
