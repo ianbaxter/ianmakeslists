@@ -1,5 +1,5 @@
 // setup canvas
-const canvas = document.querySelector("canvas");
+const canvas = document.querySelector("#header-canvas");
 const ctx = canvas.getContext("2d");
 let width = (canvas.width = innerWidth);
 let height = (canvas.height = innerHeight);
