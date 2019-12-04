@@ -1,3 +1,6 @@
-# ianmakeslists
+# Ian Baaxter - Portfolio
 
-This is the source code for https://ianmakeslists.com. It is hosted by netlify.
+This is my portfolio website displaying some of the projects i have built.
+
+## Setup
+
