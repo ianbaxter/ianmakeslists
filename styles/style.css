@@ -320,6 +320,7 @@ nav h2 {
   border: 1px solid rgba(0, 0, 0, 0.125);
   margin: 25px 0px;
   padding: 10px 0px;
+  border: none;
   border-radius: 20px;
   overflow: hidden;
   -webkit-box-shadow: 8px 10px 20px 1px rgba(46, 61, 73, 0.15);
@@ -367,7 +368,7 @@ nav h2 {
   border-top-right-radius: 300px;
 }
 
-.circle-blog {
+.circle-chatwall {
   background: radial-gradient(#4f5c68, #2c3e50);
 }
 
