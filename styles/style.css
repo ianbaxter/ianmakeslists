@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Hide x overflow containing nav menu */
 body {
   overflow-x: hidden;
@@ -564,6 +568,12 @@ footer .social-link {
   #about-section #bio-picture img {
     width: 55%;
     max-height: 100%;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
