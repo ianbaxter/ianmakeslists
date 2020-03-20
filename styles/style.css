@@ -20,14 +20,14 @@ p {
   margin-bottom: 16px;
 }
 
-.content-wrap {
-  background: radial-gradient(#dddee0, #eaeaec);
-}
-
 h1 {
   font-size: 70px;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
   font-weight: 300;
+}
+
+.content-wrap {
+  background: radial-gradient(#dddee0, #eaeaec);
 }
 
 /* Navigation text styling */
@@ -188,7 +188,7 @@ nav h2 {
           transform: rotate(45deg) translate(-6px, -10px);
 }
 
-.header-section {
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -201,12 +201,12 @@ nav h2 {
   padding: 0px 10px;
 }
 
-.header-section span {
+header span {
   color: rgba(221, 222, 224, 0.8);
   font-size: 20px;
 }
 
-.header-section canvas {
+header canvas {
   position: absolute;
   top: 12vh;
   left: 0;
@@ -217,13 +217,13 @@ nav h2 {
   transition: 0.03s all ease-out;
 }
 
-.header-section .canvas-fade-in {
+header .canvas-fade-in {
   opacity: 1;
   -webkit-transition: 1.5s all ease-in-out;
   transition: 1.5s all ease-in-out;
 }
 
-.header-section .canvas-fade-in-mobile {
+header .canvas-fade-in-mobile {
   opacity: 1;
 }
 
@@ -261,7 +261,7 @@ nav h2 {
 }
 
 .main-content-wrap h1 {
-  margin: 50px 0px;
+  padding: 50px 0px;
 }
 
 .main-content-wrap a {
@@ -270,6 +270,7 @@ nav h2 {
 }
 
 #projects-section {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -283,7 +284,7 @@ nav h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 30px;
+  padding: 30px 0;
 }
 
 #projects-section h1 {
@@ -291,7 +292,6 @@ nav h2 {
 }
 
 .projects-content {
-  max-width: 1500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,7 +304,6 @@ nav h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10px 0px 30px 0px;
 }
 
 .card-container {
@@ -320,20 +319,20 @@ nav h2 {
           justify-content: center;
   width: 75vw;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  margin: 25px 0px;
+  margin: 30px 0px;
   padding: 10px 0px;
   border: none;
   border-radius: 20px;
   overflow: hidden;
-  -webkit-box-shadow: 8px 10px 20px 1px rgba(46, 61, 73, 0.15);
-          box-shadow: 8px 10px 20px 1px rgba(46, 61, 73, 0.15);
+  -webkit-box-shadow: 8px 10px 20px 0px rgba(28, 36, 43, 0.15);
+          box-shadow: 8px 10px 20px 0px rgba(28, 36, 43, 0.15);
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
 .card-container:hover {
-  -webkit-box-shadow: 8px 10px 20px 6px rgba(17, 20, 24, 0.15);
-          box-shadow: 8px 10px 20px 6px rgba(17, 20, 24, 0.15);
+  -webkit-box-shadow: 8px 10px 20px 6px rgba(9, 10, 12, 0.15);
+          box-shadow: 8px 10px 20px 6px rgba(9, 10, 12, 0.15);
 }
 
 .card-container h3 {
@@ -389,7 +388,7 @@ nav h2 {
 
 #about-section {
   background: #222;
-  padding-top: 30px;
+  padding: 30px 0;
 }
 
 #about-section .about-content {
@@ -400,7 +399,7 @@ nav h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 40px 20px 40px 20px;
+  margin: 25px 0;
   text-align: center;
 }
 
@@ -426,10 +425,6 @@ nav h2 {
 
 #about-section .dev-svg {
   max-width: 3em;
-}
-
-#about-section #bio-picture {
-  margin-bottom: 20px;
 }
 
 footer {
@@ -490,15 +485,16 @@ footer .social-link {
     opacity: 1;
     margin: auto;
   }
-  .header-section a {
+  header a {
     font-size: 9.5vh;
   }
   .card-container {
     width: 40%;
     height: 240px;
-    margin: 25px 25px;
+    margin: 30px;
   }
   .projects-content {
+    width: 85%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
