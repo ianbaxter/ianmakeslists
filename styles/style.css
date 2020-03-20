@@ -6,11 +6,14 @@
 /* Hide x overflow containing nav menu */
 body {
   overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  color: #eaeaec;
 }
 
 p {
   padding: 20px 0;
   font-size: 18px;
+  margin-bottom: 16px;
 }
 
 .content-wrap {
@@ -19,13 +22,8 @@ p {
 
 h1 {
   font-size: 70px;
-  font-family: "Montserrat", sans-serif;
-  color: #eaeaec;
   margin-bottom: 40px;
-}
-
-#nav-projects {
-  color: #eaeaec;
+  font-weight: 300;
 }
 
 /* Navigation text styling */
@@ -40,16 +38,16 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   min-height: 12vh;
-  font-family: "Montserrat", sans-serif;
 }
 
 nav ul li {
   width: 65%;
+  list-style-type: none;
 }
 
 nav ul li a {
+  text-decoration: none;
   cursor: pointer;
-  color: #eaeaec;
   font-size: 18px;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
@@ -62,8 +60,8 @@ nav h2 {
   padding-left: 40px;
   font-size: 24px;
   letter-spacing: 1px;
-  color: #eaeaec;
   margin-bottom: 0;
+  font-weight: 200;
 }
 
 .nav-links {
@@ -116,7 +114,6 @@ nav h2 {
 
 .nav-menu {
   padding-right: 40px;
-  color: #eaeaec;
   cursor: pointer;
 }
 
@@ -198,7 +195,6 @@ nav h2 {
   z-index: -3;
   background: #222;
   padding: 0px 10px;
-  margin-bottom: 30px;
 }
 
 .header-section span {
@@ -255,16 +251,13 @@ nav h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
   color: rgba(0, 0, 0, 0.67);
   font-size: 18px;
   line-height: 1.6em;
 }
 
 .main-content-wrap h1 {
-  color: #222;
-  margin: 30px 0px;
+  margin: 50px 0px;
 }
 
 .main-content-wrap a {
@@ -286,6 +279,11 @@ nav h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 30px;
+}
+
+#projects-section h1 {
+  color: #222;
 }
 
 .projects-content {
@@ -340,6 +338,7 @@ nav h2 {
   padding: 40px 0px;
   color: #0d0f10;
   padding: 10px 10px 10px 20px;
+  font-weight: 300;
 }
 
 .card-container p {
@@ -386,6 +385,7 @@ nav h2 {
 
 #about-section {
   background: #222;
+  padding-top: 30px;
 }
 
 #about-section .about-content {
@@ -401,7 +401,6 @@ nav h2 {
 }
 
 #about-section h1 {
-  margin-top: 60px;
   color: #eaeaec;
   text-align: center;
 }
@@ -429,18 +428,18 @@ nav h2 {
   margin-bottom: 20px;
 }
 
-#footer {
+footer {
   width: 100%;
   height: 80px;
   background-color: #222;
   text-align: center;
 }
 
-#footer .social-link {
+footer .social-link {
   padding-top: 20px;
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 700px) {
   /* Hide the navigation button on large screens */
   .nav-menu {
     display: none;
