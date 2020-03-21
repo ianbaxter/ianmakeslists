@@ -27,7 +27,6 @@ p {
 
 h1 {
   font-size: 70px;
-  padding-bottom: 40px;
   font-weight: 300;
 }
 
@@ -151,6 +150,9 @@ header {
   z-index: -3;
   background: #222;
   padding: 0px 10px;
+  h1 {
+    padding-bottom: 40px;
+  }
   span {
     color: rgba(221, 222, 224, 0.8);
     font-size: 20px;
@@ -182,10 +184,7 @@ header {
 
 /* wrap for main content */
 .main-content-wrap {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: rgba(0, 0, 0, 0.67);
   font-size: 18px;
   line-height: 1.6em;
