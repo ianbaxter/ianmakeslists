@@ -15,7 +15,7 @@ const navToggle = () => {
 
   navLinks.forEach(link =>
     link.addEventListener("click", () => {
-      if (window.innerWidth <= 700) {
+      if (window.innerWidth <= 768) {
         // Close navigation menu if link clicked in mobile view
         navMenuToggle();
       }
