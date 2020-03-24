@@ -20,7 +20,7 @@ p {
   margin-bottom: 16px;
 }
 
-h1 {
+h2 {
   font-size: 70px;
   font-weight: 300;
 }
@@ -53,7 +53,7 @@ nav ul li a {
   transition: 0.3s linear;
 }
 
-nav h2 {
+nav h1 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -200,7 +200,7 @@ header {
   padding: 0px 10px;
 }
 
-header h1 {
+header h2 {
   padding-bottom: 40px;
 }
 
@@ -254,7 +254,7 @@ header .canvas-fade-in-mobile {
   line-height: 1.6em;
 }
 
-.main-content-wrap h1 {
+.main-content-wrap h2 {
   padding: 50px 0px;
 }
 
@@ -281,7 +281,7 @@ header .canvas-fade-in-mobile {
   padding: 30px 0;
 }
 
-#projects-section h1 {
+#projects-section h2 {
   color: #222;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -402,7 +402,7 @@ header .canvas-fade-in-mobile {
   color: #eaeaec;
 }
 
-#about-section h1 {
+#about-section h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

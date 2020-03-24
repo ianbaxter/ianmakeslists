@@ -25,7 +25,7 @@ p {
   margin-bottom: 16px;
 }
 
-h1 {
+h2 {
   font-size: 70px;
   font-weight: 300;
 }
@@ -50,7 +50,7 @@ nav {
       transition: 0.3s linear;
     }
   }
-  h2 {
+  h1 {
     flex: 1;
     font-size: 24px;
     letter-spacing: 1px;
@@ -150,7 +150,7 @@ header {
   z-index: -3;
   background: #222;
   padding: 0px 10px;
-  h1 {
+  h2 {
     padding-bottom: 40px;
   }
   span {
@@ -188,7 +188,7 @@ header {
   color: rgba(0, 0, 0, 0.67);
   font-size: 18px;
   line-height: 1.6em;
-  h1 {
+  h2 {
     padding: 50px 0px;
   }
   a {
@@ -204,7 +204,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 30px 0;
-  h1 {
+  h2 {
     color: #222;
     display: flex;
     justify-content: flex-start;
@@ -288,7 +288,7 @@ header {
   justify-content: center;
   padding: 30px 0;
   color: $primaryColor;
-  h1 {
+  h2 {
     display: flex;
     justify-content: flex-start;
   }
