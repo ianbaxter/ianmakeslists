@@ -150,10 +150,7 @@ header {
   z-index: -3;
   background: #222;
   padding: 0px 10px;
-  h2 {
-    padding-bottom: 40px;
-  }
-  span {
+  p {
     color: rgba(221, 222, 224, 0.8);
     font-size: 20px;
   }
@@ -251,8 +248,34 @@ header {
   }
   .card-content {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
+  }
+}
+
+/* for IE 11  css grid support */
+.card-container:nth-child(2) {
+  grid-row: 2;
+  margin-top: 60px;
+}
+.card-container:nth-child(3) {
+  grid-row: 3;
+  margin-top: 60px;
+}
+.card-container:nth-child(4) {
+  grid-row: 4;
+  margin-top: 60px;
+}
+@supports (grid-row: auto) {
+  .card-container:nth-child(2) {
+    margin-top: 0;
+  }
+  .card-container:nth-child(3) {
+    margin-top: 0;
+  }
+  .card-container:nth-child(4) {
+    margin-top: 0;
   }
 }
 
@@ -361,9 +384,46 @@ footer {
     p {
       font-size: 20px;
     }
-    #bio-picture {
+    .bio-picture {
       margin: auto;
       width: 400px;
+    }
+  }
+
+  /* for IE 11  css grid support */
+  .card-container:nth-child(1) {
+    margin-right: 30px;
+  }
+  .card-container:nth-child(2) {
+    grid-row: 1;
+    grid-column: 2;
+    margin-top: 0;
+    margin-left: 30px;
+  }
+  .card-container:nth-child(3) {
+    grid-row: 2;
+    margin-right: 30px;
+  }
+  .card-container:nth-child(4) {
+    grid-row: 2;
+    grid-column: 2;
+    margin-left: 30px;
+  }
+  @supports (grid-row: auto) {
+    .card-container:nth-child(1) {
+      margin-right: 0;
+    }
+    .card-container:nth-child(2) {
+      grid-row: auto;
+      margin-left: 0;
+    }
+    .card-container:nth-child(3) {
+      grid-row: auto;
+      margin-right: 0;
+    }
+    .card-container:nth-child(4) {
+      grid-row: auto;
+      margin-left: 0;
     }
   }
 }
@@ -386,9 +446,23 @@ footer {
     img {
       margin-top: 0;
     }
-    #bio-picture {
+    .bio-info {
+      margin-right: 30px;
+    }
+    .bio-picture {
       margin: 20px 0 0 0;
       width: auto;
+      /* for IE 11  css grid support */
+      grid-column: 2;
+      margin-left: 30px;
+    }
+    @supports (grid-row: auto) {
+      .bio-info {
+        margin-right: 0;
+      }
+      .bio-picture {
+        margin-left: 0;
+      }
     }
   }
 }
