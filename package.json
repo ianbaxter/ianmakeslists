@@ -1,0 +1,27 @@
+{
+  "name": "ian-makes-lists",
+  "version": "1.0.0",
+  "description": "My personal website and portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianbaxter/ianmakeslists.git"
+  },
+  "author": "Ian Baxter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianbaxter/ianmakeslists/issues"
+  },
+  "homepage": "https://github.com/ianbaxter/ianmakeslists#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2"
+  }
+}
