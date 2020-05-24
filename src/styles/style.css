@@ -396,10 +396,6 @@ header .canvas-fade-in-mobile {
   border-top-right-radius: 300px;
 }
 
-.circle-chatwall {
-  background: radial-gradient(#4f5c68, #2c3e50);
-}
-
 .circle-happy-alarm {
   background: radial-gradient(#4fb3bf, #00838f);
 }
@@ -410,6 +406,10 @@ header .canvas-fade-in-mobile {
 
 .circle-epcnw {
   background: radial-gradient(#fc7c60, #f84821);
+}
+
+.circle-more {
+  background: radial-gradient(#4f5c68, #2c3e50);
 }
 
 #about-section {

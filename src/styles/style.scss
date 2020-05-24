@@ -286,10 +286,6 @@ header {
   border-top-right-radius: 300px;
 }
 
-.circle-chatwall {
-  background: radial-gradient(#4f5c68, #2c3e50);
-}
-
 .circle-happy-alarm {
   background: radial-gradient(#4fb3bf, #00838f);
 }
@@ -300,6 +296,10 @@ header {
 
 .circle-epcnw {
   background: radial-gradient(rgb(252, 124, 96), rgb(248, 72, 33));
+}
+
+.circle-more {
+  background: radial-gradient(#4f5c68, #2c3e50);
 }
 
 #about-section {
