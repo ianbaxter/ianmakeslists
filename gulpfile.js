@@ -3,11 +3,15 @@ const babel = require("gulp-babel");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 
-gulp.task("default", function() {
+gulp.task("processJS", function () {
   return gulp
     .src("src/scripts/*.js")
     .pipe(babel())
     .pipe(concat("all.js"))
     .pipe(uglify())
     .pipe(gulp.dest("src/dist/"));
+});
+
+gulp.task("watch", function () {
+  gulp.watch("src/scripts/*.js", gulp.series("processJS"));
 });

@@ -30,6 +30,10 @@ h2 {
   font-weight: 300;
 }
 
+.lock-scroll {
+  overflow: hidden;
+}
+
 .content-wrap {
   background: radial-gradient($primaryBackgroundColor);
 }
@@ -43,11 +47,11 @@ nav {
   ul li {
     width: 65%;
     list-style-type: none;
+    margin: 0;
     a {
       text-decoration: none;
       cursor: pointer;
-      font-size: 18px;
-      transition: 0.3s linear;
+      font-size: 24px;
     }
   }
   h1 {
@@ -58,13 +62,13 @@ nav {
   }
 }
 
-.nav-content {
+.nav__content {
   width: 75vw;
   display: flex;
   align-items: center;
 }
 
-.nav-links {
+.nav__links {
   display: flex;
   position: fixed;
   top: 12vh;
@@ -77,13 +81,16 @@ nav {
   z-index: 1;
   li {
     opacity: 0;
-    margin: 30px 30px 0 30px;
+  }
+  li:last-child {
+    padding-bottom: 12vh;
   }
   a {
+    justify-content: center;
     display: flex;
     color: $primaryColor;
     letter-spacing: 2px;
-    padding: 1.5vh 0.75em;
+    padding: 12.5px 0.75em;
     filter: drop-shadow(2px 2px 0.1rem #222);
     &:hover {
       text-shadow: 2px 2px 20px rgb(255, 255, 255);
@@ -91,20 +98,19 @@ nav {
   }
 }
 
-.nav-transform {
+.nav--transform {
   transition: transform 0.2s ease-in;
 }
 
 /* Draw hamburger menu */
-.nav-menu {
+.nav__menu {
   cursor: pointer;
   div {
     width: 30px;
-    height: 4px;
+    height: 3px;
     background-color: $primaryColor;
     margin: 7px;
     transition: all 0.3s ease;
-    filter: drop-shadow(2px 2px 0.1rem #222);
   }
 }
 
@@ -113,8 +119,10 @@ nav {
 }
 
 /* Toggle class for navigation menu */
-.nav-active {
-  transform: translateX(-12%);
+.nav--active {
+  justify-content: center;
+  transition: 0.375s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateX(-12.5%);
 }
 
 /* Animate individual nav links */
@@ -131,7 +139,7 @@ nav {
 
 /* Navigation menu button animation */
 .toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 10px);
+  transform: rotate(-45deg) translate(-3.5px, 8.5px);
 }
 
 .toggle .line2 {
@@ -172,7 +180,7 @@ header {
   }
 }
 
-#header-content {
+#header__content {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -180,7 +188,7 @@ header {
 }
 
 /* wrap for main content */
-.main-content-wrap {
+.main__content-wrap {
   flex-direction: column;
   color: rgba(0, 0, 0, 0.67);
   font-size: 18px;
@@ -194,7 +202,7 @@ header {
   }
 }
 
-#projects-section {
+#projects {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -208,19 +216,19 @@ header {
   }
 }
 
-.projects-content {
+.projects__content {
   margin: 25px 0;
 }
 
-.projects-cards {
+.projects__cards {
   width: 75vw;
   display: grid;
   row-gap: 60px;
   column-gap: 60px;
-  margin: 30px 0px;
+  margin: 30px auto;
 }
 
-.card-container {
+.card {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -246,7 +254,7 @@ header {
     color: rgba(13, 15, 16, 0.67);
     padding: 10px 20px;
   }
-  .card-content {
+  .card__content {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -255,26 +263,26 @@ header {
 }
 
 /* for IE 11  css grid support */
-.card-container:nth-child(2) {
+.card:nth-child(2) {
   grid-row: 2;
   margin-top: 60px;
 }
-.card-container:nth-child(3) {
+.card:nth-child(3) {
   grid-row: 3;
   margin-top: 60px;
 }
-.card-container:nth-child(4) {
+.card:nth-child(4) {
   grid-row: 4;
   margin-top: 60px;
 }
 @supports (grid-row: auto) {
-  .card-container:nth-child(2) {
+  .card:nth-child(2) {
     margin-top: 0;
   }
-  .card-container:nth-child(3) {
+  .card:nth-child(3) {
     margin-top: 0;
   }
-  .card-container:nth-child(4) {
+  .card:nth-child(4) {
     margin-top: 0;
   }
 }
@@ -285,23 +293,23 @@ header {
   border-top-right-radius: 300px;
 }
 
-.circle-happy-alarm {
+.circle--happy-alarm {
   background: radial-gradient(#4fb3bf, #00838f);
 }
 
-.circle-noiser {
+.circle--noiser {
   background: radial-gradient(rgb(255, 206, 107), rgb(255, 182, 46));
 }
 
-.circle-epcnw {
+.circle--epcnw {
   background: radial-gradient(rgb(252, 124, 96), rgb(248, 72, 33));
 }
 
-.circle-more {
+.circle--more {
   background: radial-gradient(#4f5c68, #2c3e50);
 }
 
-#about-section {
+#about {
   background: #222;
   width: 100%;
   display: flex;
@@ -316,7 +324,7 @@ header {
   }
 }
 
-.about-content {
+.about__content {
   display: flex;
   flex-direction: column;
   margin: 25px 0;
@@ -352,10 +360,10 @@ footer {
 @media only screen and (min-width: 768px) {
   /* Hide the navigation button on large screens */
   nav {
-    .nav-menu {
+    .nav__menu {
       display: none;
     }
-    .nav-links {
+    .nav__links {
       flex-direction: row;
       width: auto;
       height: auto;
@@ -367,60 +375,64 @@ footer {
         opacity: 1;
         margin: auto;
       }
+      li:last-child {
+        padding-bottom: 0;
+      }
       a {
         padding: 0;
         margin: 0 0 0 3em;
         text-transform: uppercase;
+        font-size: 20px;
       }
     }
   }
 
-  .projects-cards {
+  .projects__cards {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  #about-section {
+  #about {
     p {
       font-size: 20px;
     }
-    .bio-picture {
+    .bio__picture {
       margin: auto;
       width: 400px;
     }
   }
 
   /* for IE 11  css grid support */
-  .card-container:nth-child(1) {
+  .card:nth-child(1) {
     margin-right: 30px;
   }
-  .card-container:nth-child(2) {
+  .card:nth-child(2) {
     grid-row: 1;
     grid-column: 2;
     margin-top: 0;
     margin-left: 30px;
   }
-  .card-container:nth-child(3) {
+  .card:nth-child(3) {
     grid-row: 2;
     margin-right: 30px;
   }
-  .card-container:nth-child(4) {
+  .card:nth-child(4) {
     grid-row: 2;
     grid-column: 2;
     margin-left: 30px;
   }
   @supports (grid-row: auto) {
-    .card-container:nth-child(1) {
+    .card:nth-child(1) {
       margin-right: 0;
     }
-    .card-container:nth-child(2) {
+    .card:nth-child(2) {
       grid-row: auto;
       margin-left: 0;
     }
-    .card-container:nth-child(3) {
+    .card:nth-child(3) {
       grid-row: auto;
       margin-right: 0;
     }
-    .card-container:nth-child(4) {
+    .card:nth-child(4) {
       grid-row: auto;
       margin-left: 0;
     }
@@ -428,15 +440,15 @@ footer {
 }
 
 @media only screen and (min-width: 1050px) {
-  .projects-cards {
+  .projects__cards {
     width: 60vw;
   }
 
-  #about-section {
-    .about-content {
+  #about {
+    .about__content {
       width: 60vw;
     }
-    .bio-content {
+    .bio {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       row-gap: 60px;
@@ -445,10 +457,10 @@ footer {
     img {
       margin-top: 0;
     }
-    .bio-info {
+    .bio__info {
       margin-right: 30px;
     }
-    .bio-picture {
+    .bio__picture {
       margin: 20px 0 0 0;
       width: auto;
       /* for IE 11  css grid support */
@@ -456,10 +468,10 @@ footer {
       margin-left: 30px;
     }
     @supports (grid-row: auto) {
-      .bio-info {
+      .bio__info {
         margin-right: 0;
       }
-      .bio-picture {
+      .bio__picture {
         margin-left: 0;
       }
     }

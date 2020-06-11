@@ -29,17 +29,17 @@
   <body>
     <div class="content-wrap">
       <nav>
-        <div class="nav-content">
+        <div class="nav__content">
           <h1>I.B.</h1>
-          <ul class="nav-links">
+          <ul class="nav__links">
             <li>
-              <a class="nav-link" href="#projects-section">Projects</a>
+              <a class="nav__link" href="#projects">Projects</a>
             </li>
             <li>
-              <a class="nav-link" href="#about-section">About</a>
+              <a class="nav__link" href="#about">About</a>
             </li>
           </ul>
-          <div class="nav-menu">
+          <div class="nav__menu">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
@@ -47,25 +47,25 @@
         </div>
       </nav>
       <header>
-        <canvas id="header-canvas"></canvas>
-        <div id="header-content">
+        <canvas id="header__canvas"></canvas>
+        <div id="header__content">
           <div>
             <h2>Ian Baxter</h2>
             <p>Software Engineer</p>
           </div>
         </div>
       </header>
-      <main class="main-content-wrap">
-        <section id="projects-section">
-          <div class="projects-content">
+      <main class="main__content-wrap">
+        <section id="projects">
+          <div class="projects__content">
             <h2>Projects</h2>
-            <div class="projects-cards">
+            <div class="projects__cards">
               <a
                 href="https://play.google.com/store/apps/details?id=com.birdbathapps.HappyAlarmClock&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
-                class="card-container"
+                class="card"
               >
-                <div class="circle circle-happy-alarm"></div>
-                <div class="card-content">
+                <div class="circle circle--happy-alarm"></div>
+                <div class="card__content">
                   <h3>Happy Alarm</h3>
                   <p>
                     An alarm application for Android that only turns off when
@@ -73,12 +73,9 @@
                   </p>
                 </div>
               </a>
-              <a
-                href="https://ianbaxter.github.io/noiser/"
-                class="card-container"
-              >
-                <div class="circle circle-noiser"></div>
-                <div class="card-content">
+              <a href="https://ianbaxter.github.io/noiser/" class="card">
+                <div class="circle circle--noiser"></div>
+                <div class="card__content">
                   <h3>Noiser</h3>
                   <p>
                     A synthesiser that uses the Web Audio API to create
@@ -88,10 +85,10 @@
               </a>
               <a
                 href="https://everyprojectcountsnorthwest.netlify.com/"
-                class="card-container"
+                class="card"
               >
-                <div class="circle circle-epcnw"></div>
-                <div class="card-content">
+                <div class="circle circle--epcnw"></div>
+                <div class="card__content">
                   <h3>Every Project Counts</h3>
                   <p>
                     A website for Every Project Counts North West, built using
@@ -99,9 +96,9 @@
                   </p>
                 </div>
               </a>
-              <a href="https://github.com/ianbaxter" class="card-container">
-                <div class="circle circle-more"></div>
-                <div class="card-content">
+              <a href="https://github.com/ianbaxter" class="card">
+                <div class="circle circle--more"></div>
+                <div class="card__content">
                   <h3>More</h3>
                   <p>
                     More apps and various other projects can be found on my
@@ -112,11 +109,11 @@
             </div>
           </div>
         </section>
-        <section id="about-section">
-          <div class="about-content">
+        <section id="about">
+          <div class="about__content">
             <h2>About</h2>
-            <div class="bio-content">
-              <div class="bio-info">
+            <div class="bio">
+              <div class="bio__info">
                 <p>
                   Hello! I'm a software engineer with a focus in Web & Android
                   development. I studied Physics and Music Technology and worked
@@ -181,7 +178,7 @@
                   </svg>
                 </div>
               </div>
-              <div class="bio-picture">
+              <div class="bio__picture">
                 <img src="src/img/portrait-2-bw.jpg" alt="Portrait of Ian." />
               </div>
             </div>

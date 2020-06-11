@@ -1,5 +1,5 @@
 // setup canvas
-const canvas = document.querySelector("#header-canvas");
+const canvas = document.querySelector("#header__canvas");
 const ctx = canvas.getContext("2d");
 let width = (canvas.width = innerWidth);
 let height = (canvas.height = innerHeight);
@@ -29,11 +29,11 @@ let lastPosition = {
   x: 0,
   y: 0,
   mouseSpeed: 0,
-  peakMouseAcceleration: 0
+  peakMouseAcceleration: 0,
 };
 
 // Event listeners for mouse control
-window.addEventListener("mousemove", event => {
+window.addEventListener("mousemove", (event) => {
   isMouseMoving = true;
 
   // Deccelerate animation when mouse stops moving
@@ -121,7 +121,7 @@ function init() {
   ctx.fillStyle = background;
   ctx.fillRect(0, 0, width, height);
 
-  blobs.forEach(blob => {
+  blobs.forEach((blob) => {
     blob.update();
   });
 
@@ -137,7 +137,7 @@ function loop() {
   ctx.fillStyle = background;
   ctx.fillRect(0, 0, width, height);
 
-  blobs.forEach(blob => {
+  blobs.forEach((blob) => {
     blob.update();
   });
 
@@ -145,7 +145,7 @@ function loop() {
 }
 
 // Resize blobs on window resize
-let onResize = function(object, type, callback) {
+let onResize = function (object, type, callback) {
   if (object == null || typeof object == "undefined") return;
   if (object.addEventListener) {
     object.addEventListener(type, callback, false);
@@ -159,7 +159,7 @@ let onResize = function(object, type, callback) {
 init();
 
 if (!isMobile) {
-  onResize(window, "resize", function(event) {
+  onResize(window, "resize", function (event) {
     canvas.classList.remove("canvas-fade-in");
     width = canvas.width = innerWidth;
     height = canvas.height = innerHeight;

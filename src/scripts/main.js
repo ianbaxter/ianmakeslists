@@ -1,19 +1,16 @@
 // Sliding navigation menu animation
 const navToggle = () => {
-  const menu = document.querySelector(".nav-menu");
-  const navBar = document.querySelector(".nav-links");
-  const navLinks = document.querySelectorAll(".nav-links li");
+  const menu = document.querySelector(".nav__menu");
+  const navBar = document.querySelector(".nav__links");
+  const navLinks = document.querySelectorAll(".nav__links li");
   const body = document.querySelector("body");
-
-  // Add transform to menu after page load to prevent initial menu transform
-  navBar.classList.add("nav-transform");
 
   menu.addEventListener("click", () => {
     // Toggle navigation menu
     navMenuToggle();
   });
 
-  navLinks.forEach(link =>
+  navLinks.forEach((link) =>
     link.addEventListener("click", () => {
       if (window.innerWidth <= 768) {
         // Close navigation menu if link clicked in mobile view
@@ -23,12 +20,13 @@ const navToggle = () => {
   );
 
   function navMenuToggle() {
-    if (navBar.classList.contains("nav-active")) {
-      navBar.classList.remove("nav-active");
-      body.classList.remove("fixedPosition");
+    if (navBar.classList.contains("nav--active")) {
+      navBar.classList.remove("nav--active");
+      body.classList.remove("lock-scroll");
     } else {
-      navBar.classList.add("nav-active");
-      body.classList.add("fixedPosition");
+      navBar.classList.add("nav--transform", "nav--active");
+      // Hide body overflow to prevent scrolling when menu is open
+      body.classList.add("lock-scroll");
     }
 
     // Animate links

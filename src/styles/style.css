@@ -25,6 +25,10 @@ h2 {
   font-weight: 300;
 }
 
+.lock-scroll {
+  overflow: hidden;
+}
+
 .content-wrap {
   background: radial-gradient(#dddee0, #eaeaec);
 }
@@ -43,14 +47,13 @@ nav {
 nav ul li {
   width: 65%;
   list-style-type: none;
+  margin: 0;
 }
 
 nav ul li a {
   text-decoration: none;
   cursor: pointer;
-  font-size: 18px;
-  -webkit-transition: 0.3s linear;
-  transition: 0.3s linear;
+  font-size: 24px;
 }
 
 nav h1 {
@@ -62,7 +65,7 @@ nav h1 {
   font-weight: 200;
 }
 
-.nav-content {
+.nav__content {
   width: 75vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,7 +75,7 @@ nav h1 {
           align-items: center;
 }
 
-.nav-links {
+.nav__links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,27 +96,33 @@ nav h1 {
   z-index: 1;
 }
 
-.nav-links li {
+.nav__links li {
   opacity: 0;
-  margin: 30px 30px 0 30px;
 }
 
-.nav-links a {
+.nav__links li:last-child {
+  padding-bottom: 12vh;
+}
+
+.nav__links a {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   color: #eaeaec;
   letter-spacing: 2px;
-  padding: 1.5vh 0.75em;
+  padding: 12.5px 0.75em;
   -webkit-filter: drop-shadow(2px 2px 0.1rem #222);
           filter: drop-shadow(2px 2px 0.1rem #222);
 }
 
-.nav-links a:hover {
+.nav__links a:hover {
   text-shadow: 2px 2px 20px white;
 }
 
-.nav-transform {
+.nav--transform {
   -webkit-transition: -webkit-transform 0.2s ease-in;
   transition: -webkit-transform 0.2s ease-in;
   transition: transform 0.2s ease-in;
@@ -121,19 +130,17 @@ nav h1 {
 }
 
 /* Draw hamburger menu */
-.nav-menu {
+.nav__menu {
   cursor: pointer;
 }
 
-.nav-menu div {
+.nav__menu div {
   width: 30px;
-  height: 4px;
+  height: 3px;
   background-color: #eaeaec;
   margin: 7px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-filter: drop-shadow(2px 2px 0.1rem #222);
-          filter: drop-shadow(2px 2px 0.1rem #222);
 }
 
 .submenu-item a:hover {
@@ -141,9 +148,14 @@ nav h1 {
 }
 
 /* Toggle class for navigation menu */
-.nav-active {
-  -webkit-transform: translateX(-12%);
-          transform: translateX(-12%);
+.nav--active {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.375s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: 0.375s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transform: translateX(-12.5%);
+          transform: translateX(-12.5%);
 }
 
 /* Animate individual nav links */
@@ -174,8 +186,8 @@ nav h1 {
 
 /* Navigation menu button animation */
 .toggle .line1 {
-  -webkit-transform: rotate(-45deg) translate(-5px, 10px);
-          transform: rotate(-45deg) translate(-5px, 10px);
+  -webkit-transform: rotate(-45deg) translate(-3.5px, 8.5px);
+          transform: rotate(-45deg) translate(-3.5px, 8.5px);
 }
 
 .toggle .line2 {
@@ -226,7 +238,7 @@ header .canvas-fade-in-mobile {
   opacity: 1;
 }
 
-#header-content {
+#header__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,7 +252,7 @@ header .canvas-fade-in-mobile {
 }
 
 /* wrap for main content */
-.main-content-wrap {
+.main__content-wrap {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -250,16 +262,16 @@ header .canvas-fade-in-mobile {
   line-height: 1.6em;
 }
 
-.main-content-wrap h2 {
+.main__content-wrap h2 {
   padding: 50px 0px;
 }
 
-.main-content-wrap a {
+.main__content-wrap a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.67);
 }
 
-#projects-section {
+#projects {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,7 +289,7 @@ header .canvas-fade-in-mobile {
   padding: 30px 0;
 }
 
-#projects-section h2 {
+#projects h2 {
   color: #222;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -287,21 +299,21 @@ header .canvas-fade-in-mobile {
           justify-content: flex-start;
 }
 
-.projects-content {
+.projects__content {
   margin: 25px 0;
 }
 
-.projects-cards {
+.projects__cards {
   width: 75vw;
   display: -ms-grid;
   display: grid;
   row-gap: 60px;
   -webkit-column-gap: 60px;
           column-gap: 60px;
-  margin: 30px 0px;
+  margin: 30px auto;
 }
 
-.card-container {
+.card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,12 +334,12 @@ header .canvas-fade-in-mobile {
   transition: 0.2s;
 }
 
-.card-container:hover {
+.card:hover {
   -webkit-box-shadow: 2px 10px 20px 8px rgba(0, 0, 0, 0.15);
           box-shadow: 2px 10px 20px 8px rgba(0, 0, 0, 0.15);
 }
 
-.card-container h3 {
+.card h3 {
   margin-bottom: 0;
   font-size: 28px;
   padding: 40px 0px;
@@ -336,13 +348,13 @@ header .canvas-fade-in-mobile {
   font-weight: 300;
 }
 
-.card-container p {
+.card p {
   font-size: 18px;
   color: rgba(13, 15, 16, 0.67);
   padding: 10px 20px;
 }
 
-.card-container .card-content {
+.card .card__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,32 +371,32 @@ header .canvas-fade-in-mobile {
 }
 
 /* for IE 11  css grid support */
-.card-container:nth-child(2) {
+.card:nth-child(2) {
   -ms-grid-row: 2;
   grid-row: 2;
   margin-top: 60px;
 }
 
-.card-container:nth-child(3) {
+.card:nth-child(3) {
   -ms-grid-row: 3;
   grid-row: 3;
   margin-top: 60px;
 }
 
-.card-container:nth-child(4) {
+.card:nth-child(4) {
   -ms-grid-row: 4;
   grid-row: 4;
   margin-top: 60px;
 }
 
 @supports (grid-row: auto) {
-  .card-container:nth-child(2) {
+  .card:nth-child(2) {
     margin-top: 0;
   }
-  .card-container:nth-child(3) {
+  .card:nth-child(3) {
     margin-top: 0;
   }
-  .card-container:nth-child(4) {
+  .card:nth-child(4) {
     margin-top: 0;
   }
 }
@@ -395,23 +407,23 @@ header .canvas-fade-in-mobile {
   border-top-right-radius: 300px;
 }
 
-.circle-happy-alarm {
+.circle--happy-alarm {
   background: radial-gradient(#4fb3bf, #00838f);
 }
 
-.circle-noiser {
+.circle--noiser {
   background: radial-gradient(#ffce6b, #ffb62e);
 }
 
-.circle-epcnw {
+.circle--epcnw {
   background: radial-gradient(#fc7c60, #f84821);
 }
 
-.circle-more {
+.circle--more {
   background: radial-gradient(#4f5c68, #2c3e50);
 }
 
-#about-section {
+#about {
   background: #222;
   width: 100%;
   display: -webkit-box;
@@ -431,7 +443,7 @@ header .canvas-fade-in-mobile {
   color: #eaeaec;
 }
 
-#about-section h2 {
+#about h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -440,7 +452,7 @@ header .canvas-fade-in-mobile {
           justify-content: flex-start;
 }
 
-.about-content {
+.about__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -455,19 +467,19 @@ header .canvas-fade-in-mobile {
   width: 75vw;
 }
 
-.about-content p {
+.about__content p {
   margin-bottom: 0;
 }
 
-.about-content #dev-logos {
+.about__content #dev-logos {
   padding-top: 20px;
 }
 
-.about-content .dev-svg {
+.about__content .dev-svg {
   max-width: 3em;
 }
 
-.about-content img {
+.about__content img {
   max-width: 100%;
   max-height: 100%;
   border-radius: 20px;
@@ -493,10 +505,10 @@ footer {
 
 @media only screen and (min-width: 768px) {
   /* Hide the navigation button on large screens */
-  nav .nav-menu {
+  nav .nav__menu {
     display: none;
   }
-  nav .nav-links {
+  nav .nav__links {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -510,31 +522,35 @@ footer {
     transition: all 0s ease 0s;
     background: transparent;
   }
-  nav .nav-links li {
+  nav .nav__links li {
     opacity: 1;
     margin: auto;
   }
-  nav .nav-links a {
+  nav .nav__links li:last-child {
+    padding-bottom: 0;
+  }
+  nav .nav__links a {
     padding: 0;
     margin: 0 0 0 3em;
     text-transform: uppercase;
+    font-size: 20px;
   }
-  .projects-cards {
+  .projects__cards {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
-  #about-section p {
+  #about p {
     font-size: 20px;
   }
-  #about-section .bio-picture {
+  #about .bio__picture {
     margin: auto;
     width: 400px;
   }
   /* for IE 11  css grid support */
-  .card-container:nth-child(1) {
+  .card:nth-child(1) {
     margin-right: 30px;
   }
-  .card-container:nth-child(2) {
+  .card:nth-child(2) {
     -ms-grid-row: 1;
     grid-row: 1;
     -ms-grid-column: 2;
@@ -542,12 +558,12 @@ footer {
     margin-top: 0;
     margin-left: 30px;
   }
-  .card-container:nth-child(3) {
+  .card:nth-child(3) {
     -ms-grid-row: 2;
     grid-row: 2;
     margin-right: 30px;
   }
-  .card-container:nth-child(4) {
+  .card:nth-child(4) {
     -ms-grid-row: 2;
     grid-row: 2;
     -ms-grid-column: 2;
@@ -555,18 +571,18 @@ footer {
     margin-left: 30px;
   }
   @supports (grid-row: auto) {
-    .card-container:nth-child(1) {
+    .card:nth-child(1) {
       margin-right: 0;
     }
-    .card-container:nth-child(2) {
+    .card:nth-child(2) {
       grid-row: auto;
       margin-left: 0;
     }
-    .card-container:nth-child(3) {
+    .card:nth-child(3) {
       grid-row: auto;
       margin-right: 0;
     }
-    .card-container:nth-child(4) {
+    .card:nth-child(4) {
       grid-row: auto;
       margin-left: 0;
     }
@@ -574,13 +590,13 @@ footer {
 }
 
 @media only screen and (min-width: 1050px) {
-  .projects-cards {
+  .projects__cards {
     width: 60vw;
   }
-  #about-section .about-content {
+  #about .about__content {
     width: 60vw;
   }
-  #about-section .bio-content {
+  #about .bio {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
@@ -589,13 +605,13 @@ footer {
     -webkit-column-gap: 60px;
             column-gap: 60px;
   }
-  #about-section img {
+  #about img {
     margin-top: 0;
   }
-  #about-section .bio-info {
+  #about .bio__info {
     margin-right: 30px;
   }
-  #about-section .bio-picture {
+  #about .bio__picture {
     margin: 20px 0 0 0;
     width: auto;
     /* for IE 11  css grid support */
@@ -604,10 +620,10 @@ footer {
     margin-left: 30px;
   }
   @supports (grid-row: auto) {
-    #about-section .bio-info {
+    #about .bio__info {
       margin-right: 0;
     }
-    #about-section .bio-picture {
+    #about .bio__picture {
       margin-left: 0;
     }
   }
