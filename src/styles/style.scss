@@ -17,6 +17,7 @@ body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
   color: $primaryColor;
+  background: radial-gradient($primaryBackgroundColor);
 }
 
 p {
@@ -32,10 +33,6 @@ h2 {
 
 .lock-scroll {
   overflow: hidden;
-}
-
-.content-wrap {
-  background: radial-gradient($primaryBackgroundColor);
 }
 
 /* Navigation text styling */
@@ -187,8 +184,8 @@ header {
   z-index: 0;
 }
 
-/* wrap for main content */
-.main__content-wrap {
+/* main content */
+main {
   flex-direction: column;
   color: rgba(0, 0, 0, 0.67);
   font-size: 18px;
@@ -481,5 +478,27 @@ footer {
 @media screen and (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+/* Secret */
+.secret {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.secret__bg {
+  background: center url("/src/imgmin/swirling.gif");
+  height: 75%;
+  width: 75%;
+  border-radius: 20px;
+  transition: 0.275s;
+  box-shadow: 0px 0px 7px #000000;
+  &:hover {
+    transition: 0.275s;
+    filter: invert(100%);
+    box-shadow: inset 0px 0px 7px #ffffff;
   }
 }

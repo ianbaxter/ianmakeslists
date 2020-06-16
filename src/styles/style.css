@@ -12,6 +12,7 @@ body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
   color: #eaeaec;
+  background: radial-gradient(#dddee0, #eaeaec);
 }
 
 p {
@@ -27,10 +28,6 @@ h2 {
 
 .lock-scroll {
   overflow: hidden;
-}
-
-.content-wrap {
-  background: radial-gradient(#dddee0, #eaeaec);
 }
 
 /* Navigation text styling */
@@ -251,8 +248,8 @@ header .canvas-fade-in-mobile {
   z-index: 0;
 }
 
-/* wrap for main content */
-.main__content-wrap {
+/* main content */
+main {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -262,11 +259,11 @@ header .canvas-fade-in-mobile {
   line-height: 1.6em;
 }
 
-.main__content-wrap h2 {
+main h2 {
   padding: 50px 0px;
 }
 
-.main__content-wrap a {
+main a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.67);
 }
@@ -633,5 +630,39 @@ footer {
   html {
     scroll-behavior: auto;
   }
+}
+
+/* Secret */
+.secret {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.secret__bg {
+  background: center url("/src/imgmin/swirling.gif");
+  height: 75%;
+  width: 75%;
+  border-radius: 20px;
+  -webkit-transition: 0.275s;
+  transition: 0.275s;
+  -webkit-box-shadow: 0px 0px 7px #000000;
+          box-shadow: 0px 0px 7px #000000;
+}
+
+.secret__bg:hover {
+  -webkit-transition: 0.275s;
+  transition: 0.275s;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  -webkit-box-shadow: inset 0px 0px 7px #ffffff;
+          box-shadow: inset 0px 0px 7px #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
