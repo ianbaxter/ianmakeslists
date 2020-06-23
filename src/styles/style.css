@@ -21,8 +21,36 @@ p {
   margin-bottom: 16px;
 }
 
-h2 {
+a {
+  text-decoration: none;
+}
+
+h1 {
   font-size: 70px;
+  font-weight: 300;
+}
+
+h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+
+h3 {
+  margin-bottom: 0;
+  font-size: 28px;
+  padding: 40px 0px;
+  color: #0d0f10;
+  padding: 10px 10px 10px 20px;
   font-weight: 300;
 }
 
@@ -30,40 +58,27 @@ h2 {
   overflow: hidden;
 }
 
-/* Navigation text styling */
-nav {
+.top {
   background: #222;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 12vh;
 }
 
-nav ul li {
-  width: 65%;
-  list-style-type: none;
-  margin: 0;
-}
-
-nav ul li a {
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 24px;
-}
-
-nav h1 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  font-size: 24px;
-  letter-spacing: 1px;
-  font-weight: 200;
-}
-
-.nav__content {
+.top .top__content {
   width: 75vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,13 +87,14 @@ nav h1 {
           align-items: center;
 }
 
-.nav__links {
+nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: fixed;
   top: 12vh;
   height: 88vh;
+  left: 0;
   background: #222222;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -93,15 +109,19 @@ nav h1 {
   z-index: 1;
 }
 
-.nav__links li {
+nav ul li {
+  width: 65%;
+  list-style-type: none;
+  margin: 0;
   opacity: 0;
 }
 
-.nav__links li:last-child {
+nav ul li:last-child {
   padding-bottom: 12vh;
 }
 
-.nav__links a {
+nav ul a {
+  font-size: 24px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -115,23 +135,15 @@ nav h1 {
           filter: drop-shadow(2px 2px 0.1rem #222);
 }
 
-.nav__links a:hover {
+nav ul a:hover {
   text-shadow: 2px 2px 20px white;
 }
 
-.nav--transform {
-  -webkit-transition: -webkit-transform 0.2s ease-in;
-  transition: -webkit-transform 0.2s ease-in;
-  transition: transform 0.2s ease-in;
-  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
-}
-
-/* Draw hamburger menu */
-.nav__menu {
+.hamburger-menu {
   cursor: pointer;
 }
 
-.nav__menu div {
+.hamburger-menu div {
   width: 30px;
   height: 3px;
   background-color: #eaeaec;
@@ -140,19 +152,22 @@ nav h1 {
   transition: all 0.3s ease;
 }
 
-.submenu-item a:hover {
-  text-shadow: 2px 2px 20px white;
-}
-
 /* Toggle class for navigation menu */
-.nav--active {
+.menu--active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-transition: 0.375s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: 0.375s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -webkit-transform: translateX(-12.5%);
-          transform: translateX(-12.5%);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.menu--transform {
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
 }
 
 /* Animate individual nav links */
@@ -196,7 +211,7 @@ nav h1 {
           transform: rotate(45deg) translate(-6px, -10px);
 }
 
-header {
+.title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,33 +224,12 @@ header {
   padding: 0px 10px;
 }
 
-header p {
+.title p {
   color: rgba(221, 222, 224, 0.8);
   font-size: 20px;
 }
 
-header canvas {
-  position: absolute;
-  top: 12vh;
-  left: 0;
-  height: 88vh;
-  width: 100vw;
-  opacity: 0;
-  -webkit-transition: 0.03s all ease-out;
-  transition: 0.03s all ease-out;
-}
-
-header .canvas-fade-in {
-  opacity: 1;
-  -webkit-transition: 1.5s all ease-in-out;
-  transition: 1.5s all ease-in-out;
-}
-
-header .canvas-fade-in-mobile {
-  opacity: 1;
-}
-
-#header__content {
+.title .title__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -248,7 +242,27 @@ header .canvas-fade-in-mobile {
   z-index: 0;
 }
 
-/* main content */
+.title canvas {
+  position: absolute;
+  top: 12vh;
+  left: 0;
+  height: 88vh;
+  width: 100vw;
+  opacity: 0;
+  -webkit-transition: 0.03s all ease-out;
+  transition: 0.03s all ease-out;
+}
+
+.title .canvas-fade-in {
+  opacity: 1;
+  -webkit-transition: 1.5s all ease-in-out;
+  transition: 1.5s all ease-in-out;
+}
+
+.title .canvas-fade-in-mobile {
+  opacity: 1;
+}
+
 main {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -259,12 +273,11 @@ main {
   line-height: 1.6em;
 }
 
-main h2 {
+main h1 {
   padding: 50px 0px;
 }
 
 main a {
-  text-decoration: none;
   color: rgba(0, 0, 0, 0.67);
 }
 
@@ -286,21 +299,15 @@ main a {
   padding: 30px 0;
 }
 
-#projects h2 {
+#projects h1 {
   color: #222;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
-.projects__content {
+#projects .projects__content {
   margin: 25px 0;
 }
 
-.projects__cards {
+#projects .projects__cards {
   width: 75vw;
   display: -ms-grid;
   display: grid;
@@ -334,15 +341,6 @@ main a {
 .card:hover {
   -webkit-box-shadow: 2px 10px 20px 8px rgba(0, 0, 0, 0.15);
           box-shadow: 2px 10px 20px 8px rgba(0, 0, 0, 0.15);
-}
-
-.card h3 {
-  margin-bottom: 0;
-  font-size: 28px;
-  padding: 40px 0px;
-  color: #0d0f10;
-  padding: 10px 10px 10px 20px;
-  font-weight: 300;
 }
 
 .card p {
@@ -440,16 +438,7 @@ main a {
   color: #eaeaec;
 }
 
-#about h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.about__content {
+#about .about__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -464,19 +453,19 @@ main a {
   width: 75vw;
 }
 
-.about__content p {
+#about .about__content p {
   margin-bottom: 0;
 }
 
-.about__content #dev-logos {
+#about .about__content .dev-logos {
   padding-top: 20px;
 }
 
-.about__content .dev-svg {
+#about .about__content .dev-logos svg {
   max-width: 3em;
 }
 
-.about__content img {
+#about .about__content img {
   max-width: 100%;
   max-height: 100%;
   border-radius: 20px;
@@ -502,10 +491,7 @@ footer {
 
 @media only screen and (min-width: 768px) {
   /* Hide the navigation button on large screens */
-  nav .nav__menu {
-    display: none;
-  }
-  nav .nav__links {
+  nav ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -519,18 +505,21 @@ footer {
     transition: all 0s ease 0s;
     background: transparent;
   }
-  nav .nav__links li {
+  nav ul li {
     opacity: 1;
     margin: auto;
   }
-  nav .nav__links li:last-child {
+  nav ul li:last-child {
     padding-bottom: 0;
   }
-  nav .nav__links a {
+  nav ul a {
     padding: 0;
     margin: 0 0 0 3em;
     text-transform: uppercase;
     font-size: 20px;
+  }
+  .hamburger-menu {
+    display: none;
   }
   .projects__cards {
     -ms-grid-columns: (1fr)[2];
@@ -587,13 +576,13 @@ footer {
 }
 
 @media only screen and (min-width: 1050px) {
-  .projects__cards {
+  #projects .projects__cards {
     width: 60vw;
   }
   #about .about__content {
     width: 60vw;
   }
-  #about .bio {
+  #about .about__content .bio {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
@@ -602,13 +591,13 @@ footer {
     -webkit-column-gap: 60px;
             column-gap: 60px;
   }
-  #about img {
+  #about .about__content img {
     margin-top: 0;
   }
-  #about .bio__info {
+  #about .about__content .bio__info {
     margin-right: 30px;
   }
-  #about .bio__picture {
+  #about .about__content .bio__picture {
     margin: 20px 0 0 0;
     width: auto;
     /* for IE 11  css grid support */
@@ -617,10 +606,10 @@ footer {
     margin-left: 30px;
   }
   @supports (grid-row: auto) {
-    #about .bio__info {
+    #about .about__content .bio__info {
       margin-right: 0;
     }
-    #about .bio__picture {
+    #about .about__content .bio__picture {
       margin-left: 0;
     }
   }
