@@ -214,11 +214,20 @@ main {
   h1 {
     color: #222;
   }
+  h4 {
+    color: black;
+    a {
+      color: black;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
   .projects__content {
     margin: 25px 0;
+    width: 75vw;
   }
   .projects__cards {
-    width: 75vw;
     display: grid;
     row-gap: 60px;
     column-gap: 60px;
@@ -295,7 +304,7 @@ main {
   background: radial-gradient(rgb(252, 124, 96), rgb(248, 72, 33));
 }
 
-.circle--more {
+.circle--poetical {
   background: radial-gradient(#4f5c68, #2c3e50);
 }
 
@@ -427,7 +436,7 @@ footer {
 
 @media only screen and (min-width: 1050px) {
   #projects {
-    .projects__cards {
+    .projects__content {
       width: 60vw;
     }
   }

@@ -303,12 +303,24 @@ main a {
   color: #222;
 }
 
+#projects h4 {
+  color: black;
+}
+
+#projects h4 a {
+  color: black;
+}
+
+#projects h4 a:hover {
+  text-decoration: underline;
+}
+
 #projects .projects__content {
   margin: 25px 0;
+  width: 75vw;
 }
 
 #projects .projects__cards {
-  width: 75vw;
   display: -ms-grid;
   display: grid;
   row-gap: 60px;
@@ -414,7 +426,7 @@ main a {
   background: radial-gradient(#fc7c60, #f84821);
 }
 
-.circle--more {
+.circle--poetical {
   background: radial-gradient(#4f5c68, #2c3e50);
 }
 
@@ -576,7 +588,7 @@ footer {
 }
 
 @media only screen and (min-width: 1050px) {
-  #projects .projects__cards {
+  #projects .projects__content {
     width: 60vw;
   }
   #about .about__content {
