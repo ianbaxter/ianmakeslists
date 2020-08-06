@@ -106,8 +106,13 @@ nav {
   }
 }
 
-.hamburger-menu {
+.menu {
   cursor: pointer;
+  background: transparent;
+  border: 0;
+  &:focus {
+    outline: 0;
+  }
   div {
     width: 30px;
     height: 3px;
@@ -368,7 +373,7 @@ footer {
     }
   }
 
-  .hamburger-menu {
+  .menu {
     display: none;
   }
 

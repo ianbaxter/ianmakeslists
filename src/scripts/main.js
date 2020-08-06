@@ -1,6 +1,6 @@
 // Sliding navigation menu animation
 const navToggle = () => {
-  const menu = document.querySelector(".hamburger-menu");
+  const menu = document.querySelector(".menu");
   const navBar = document.querySelector("nav ul");
   const navLinks = document.querySelectorAll("nav li");
   const body = document.querySelector("body");
@@ -12,8 +12,8 @@ const navToggle = () => {
 
   navLinks.forEach((link) =>
     link.addEventListener("click", () => {
-      if (window.innerWidth <= 768) {
-        // Close navigation menu if link clicked in mobile view
+      if (navBar.classList.contains("menu--active")) {
+        // Close menu when link is clicked
         navMenuToggle();
       }
     })

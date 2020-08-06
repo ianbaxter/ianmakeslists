@@ -137,11 +137,17 @@ nav ul a:hover {
   text-shadow: 2px 2px 20px white;
 }
 
-.hamburger-menu {
+.menu {
   cursor: pointer;
+  background: transparent;
+  border: 0;
 }
 
-.hamburger-menu div {
+.menu:focus {
+  outline: 0;
+}
+
+.menu div {
   width: 30px;
   height: 3px;
   background-color: #eaeaec;
@@ -516,7 +522,7 @@ footer {
     text-transform: uppercase;
     font-size: 20px;
   }
-  .hamburger-menu {
+  .menu {
     display: none;
   }
   .projects__cards {
