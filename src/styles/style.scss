@@ -82,6 +82,7 @@ nav {
     width: 100%;
     transform: translateX(100%);
     z-index: 1;
+    transition: 0.375s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     li {
       width: 65%;
       list-style-type: none;
@@ -125,12 +126,7 @@ nav {
 /* Toggle class for navigation menu */
 .menu--active {
   justify-content: center;
-  transition: 0.375s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform: translateX(0%);
-}
-
-.menu--transform {
-  transition: transform 0.2s ease-in;
 }
 
 /* Animate individual nav links */
@@ -360,9 +356,9 @@ footer {
       li {
         opacity: 1;
         margin: auto;
-      }
-      li:last-child {
-        padding-bottom: 0;
+        &:last-child {
+          padding-bottom: 0;
+        }
       }
       a {
         padding: 0;

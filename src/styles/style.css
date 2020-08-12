@@ -105,6 +105,8 @@ nav ul {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   z-index: 1;
+  -webkit-transition: 0.375s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: 0.375s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 nav ul li {
@@ -161,17 +163,8 @@ nav ul a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: 0.375s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: 0.375s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
-}
-
-.menu--transform {
-  -webkit-transition: -webkit-transform 0.2s ease-in;
-  transition: -webkit-transform 0.2s ease-in;
-  transition: transform 0.2s ease-in;
-  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
 }
 
 /* Animate individual nav links */
