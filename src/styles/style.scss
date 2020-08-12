@@ -12,8 +12,8 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Hide x overflow containing nav menu */
 body {
+  /* Hide x overflow containing nav menu */
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
   color: $primaryColor;
@@ -123,7 +123,6 @@ nav {
   }
 }
 
-/* Toggle class for navigation menu */
 .menu--active {
   justify-content: center;
   transform: translateX(0%);
@@ -142,7 +141,7 @@ nav {
 }
 
 /* Navigation menu button animation */
-.toggle {
+.menu--transform {
   .line1 {
     transform: rotate(-45deg) translate(-3.5px, 8.5px);
   }
@@ -342,7 +341,32 @@ footer {
   background-color: #222;
 }
 
-@media only screen and (min-width: 768px) {
+/* Secret */
+.secret {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.secret__bg {
+  background: center url("/src/imgmin/swirling.gif");
+  height: 75%;
+  width: 75%;
+  border-radius: 20px;
+  transition: 0.275s;
+  box-shadow: 0px 0px 7px #000000;
+  &:hover {
+    transition: 0.275s;
+    filter: invert(100%);
+    box-shadow: inset 0px 0px 7px #ffffff;
+  }
+}
+
+/* MEDIA QUERIES */
+
+/* tablets */
+@media screen and (min-width: 768px) {
   /* Hide the navigation button on large screens */
   nav {
     ul {
@@ -425,7 +449,8 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1050px) {
+/* desktop */
+@media screen and (min-width: 1050px) {
   #projects {
     .projects__content {
       width: 60vw;
@@ -468,27 +493,5 @@ footer {
 @media screen and (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-}
-
-/* Secret */
-.secret {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.secret__bg {
-  background: center url("/src/imgmin/swirling.gif");
-  height: 75%;
-  width: 75%;
-  border-radius: 20px;
-  transition: 0.275s;
-  box-shadow: 0px 0px 7px #000000;
-  &:hover {
-    transition: 0.275s;
-    filter: invert(100%);
-    box-shadow: inset 0px 0px 7px #ffffff;
   }
 }

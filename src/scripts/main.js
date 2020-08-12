@@ -1,32 +1,26 @@
-// Sliding navigation menu animation
+/* Nav menu animation */
 const menuBtn = document.querySelector(".menu");
 const navBar = document.querySelector("nav ul");
 const navLinks = document.querySelectorAll("nav li");
 const body = document.querySelector("body");
 
 menuBtn.addEventListener("click", () => {
-  // Toggle navigation menu
   navMenuToggle();
 });
 
 navLinks.forEach((link) =>
   link.addEventListener("click", () => {
+    // When menu is open, close menu when link is clicked
     if (navBar.classList.contains("menu--active")) {
-      // Close menu when link is clicked
       navMenuToggle();
     }
   })
 );
 
 function navMenuToggle() {
-  if (navBar.classList.contains("menu--active")) {
-    navBar.classList.remove("menu--active");
-    body.classList.remove("lock-scroll");
-  } else {
-    navBar.classList.add("menu--active");
-    // Hide body overflow to prevent scrolling when menu is open
-    body.classList.add("lock-scroll");
-  }
+  navBar.classList.toggle("menu--active");
+  body.classList.toggle("lock-scroll");
+  menuBtn.classList.toggle("menu--transform");
 
   // Animate links
   navLinks.forEach((link, index) => {
@@ -36,7 +30,4 @@ function navMenuToggle() {
       link.style.animation = `navLinkFade 0.4s ease forwards ${index / 7}s`;
     }
   });
-
-  // Navigation menu animation
-  menuBtn.classList.toggle("toggle");
 }
