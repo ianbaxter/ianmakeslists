@@ -67,7 +67,7 @@
             <a href="https://github.com/ianbaxter">Github</a>
           </p>
           <div class="projects__cards">
-            <a href="https://poetical.web.app/" class="card">
+            <a href="https://poetical.web.app/" class="card card--poetical">
               <div class="circle circle--poetical"></div>
               <div class="card__content">
                 <h3>Poetical</h3>
@@ -79,7 +79,7 @@
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=com.birdbathapps.HappyAlarmClock&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
-              class="card"
+              class="card card--happy-alarm"
             >
               <div class="circle circle--happy-alarm"></div>
               <div class="card__content">
@@ -92,7 +92,7 @@
             </a>
             <a
               href="https://everyprojectcountsnorthwest.netlify.com/"
-              class="card"
+              class="card card--epcnw"
             >
               <div class="circle circle--epcnw"></div>
               <div class="card__content">
@@ -103,7 +103,10 @@
                 </p>
               </div>
             </a>
-            <a href="https://ianbaxter.github.io/noiser/" class="card">
+            <a
+              href="https://ianbaxter.github.io/noiser/"
+              class="card card--noiser"
+            >
               <div class="circle circle--noiser"></div>
               <div class="card__content">
                 <h3>Noiser</h3>
@@ -187,8 +190,9 @@
             <div class="bio__picture">
               <a href="secret.html">
                 <img
-                  src="src/imgmin/portrait-2-bw.jpg"
-                  alt="Portrait of Ian."
+                  srcset="src/imgmin/portrait-large.jpg 768w"
+                  src="src/imgmin/portrait-small.jpg"
+                  alt="Portrait of Ian"
                 />
               </a>
             </div>

@@ -344,8 +344,8 @@ main a {
 }
 
 .card:hover {
-  -webkit-box-shadow: 2px 10px 20px 8px rgba(0, 0, 0, 0.15);
-          box-shadow: 2px 10px 20px 8px rgba(0, 0, 0, 0.15);
+  -webkit-transform: translate(0, -2px);
+          transform: translate(0, -2px);
 }
 
 .card .card__content {
@@ -360,6 +360,26 @@ main a {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0 20px;
+}
+
+.card--poetical:hover {
+  -webkit-box-shadow: 2px 10px 20px 6px rgba(0, 0, 0, 0.1), 2px 10px 20px 4px rgba(44, 62, 80, 0.1);
+          box-shadow: 2px 10px 20px 6px rgba(0, 0, 0, 0.1), 2px 10px 20px 4px rgba(44, 62, 80, 0.1);
+}
+
+.card--happy-alarm:hover {
+  -webkit-box-shadow: 2px 10px 20px 6px rgba(0, 0, 0, 0.1), 2px 10px 20px 4px rgba(0, 131, 143, 0.1);
+          box-shadow: 2px 10px 20px 6px rgba(0, 0, 0, 0.1), 2px 10px 20px 4px rgba(0, 131, 143, 0.1);
+}
+
+.card--epcnw:hover {
+  -webkit-box-shadow: 2px 10px 20px 6px rgba(0, 0, 0, 0.1), 2px 10px 20px 4px rgba(248, 72, 33, 0.1);
+          box-shadow: 2px 10px 20px 6px rgba(0, 0, 0, 0.1), 2px 10px 20px 4px rgba(248, 72, 33, 0.1);
+}
+
+.card--noiser:hover {
+  -webkit-box-shadow: 2px 10px 20px 6px rgba(0, 0, 0, 0.1), 2px 10px 20px 4px rgba(255, 182, 46, 0.1);
+          box-shadow: 2px 10px 20px 6px rgba(0, 0, 0, 0.1), 2px 10px 20px 4px rgba(255, 182, 46, 0.1);
 }
 
 /* for IE 11  css grid support */
@@ -468,6 +488,7 @@ main a {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin-top: 40px;
+  color: #eaeaec;
 }
 
 footer {
