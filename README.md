@@ -1,3 +1,5 @@
-# Ian Baxter - Portfolio
+# Portfolio
 
-This is my portfolio website displaying some of the projects i have built.
+The source code for my portfolio website.
+
+I kept it simple and just used HTML, CSS & JavaSript.
