@@ -228,40 +228,11 @@ footer {
 
 /* tablets */
 @media screen and (min-width: 768px) {
-  /* Hide the navigation button on large screens */
-  nav {
-    ul {
-      flex-direction: row;
-      width: auto;
-      height: auto;
-      position: static;
-      transform: none;
-      transition: all 0s ease 0s;
-      background: transparent;
-      li {
-        opacity: 1;
-        margin: auto;
-        &:last-child {
-          padding-bottom: 0;
-        }
-      }
-      a {
-        padding: 0;
-        margin: 0 0 0 3em;
-        text-transform: uppercase;
-        font-size: 20px;
-      }
-    }
-  }
-
   .projects__cards {
     grid-template-columns: repeat(2, 1fr);
   }
 
   #about {
-    p {
-      font-size: 20px;
-    }
     .bio__picture {
       margin: auto;
       width: 285px;

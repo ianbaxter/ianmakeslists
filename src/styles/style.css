@@ -267,40 +267,9 @@ footer {
 /* MEDIA QUERIES */
 /* tablets */
 @media screen and (min-width: 768px) {
-  /* Hide the navigation button on large screens */
-  nav ul {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: auto;
-    height: auto;
-    position: static;
-    -webkit-transform: none;
-            transform: none;
-    -webkit-transition: all 0s ease 0s;
-    transition: all 0s ease 0s;
-    background: transparent;
-  }
-  nav ul li {
-    opacity: 1;
-    margin: auto;
-  }
-  nav ul li:last-child {
-    padding-bottom: 0;
-  }
-  nav ul a {
-    padding: 0;
-    margin: 0 0 0 3em;
-    text-transform: uppercase;
-    font-size: 20px;
-  }
   .projects__cards {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-  }
-  #about p {
-    font-size: 20px;
   }
   #about .bio__picture {
     margin: auto;
