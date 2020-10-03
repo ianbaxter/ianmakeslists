@@ -40,7 +40,6 @@ a {
 }
 
 header {
-  position: relative;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -69,7 +68,9 @@ header .header-title {
 
 header canvas {
   position: absolute;
+  left: 0;
   width: 100%;
+  height: 100%;
   opacity: 0;
   -webkit-transition: 0.03s all ease-out;
   transition: 0.03s all ease-out;
